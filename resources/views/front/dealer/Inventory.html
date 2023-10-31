@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Inventory</title>
+    <link rel="stylesheet" href="css/inventory.css" />
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+
+    <div class="mobile_container">
+      <div class="container">
+        <div class="navbar">
+          <a href="home.html" class="login__navbar">
+              <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                  <circle cx="20.5" cy="20.5" r="20.5" fill="#F8F8FB"></circle>
+                  <path d="M23 15L17 21L23 27" stroke="#8A94A6" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+          </a>
+          <h2 class="navbar__title">Inventory</h2>
+          <span style="width: 41px;"></span>
+      </div>
+        <div class="name__filter">
+          <div class="name__field">
+            <select>
+              <option value="romjan-ali">Romjan Ali</option>
+              <option value="romjan-ali">mujibur rahman</option>
+              <option value="romjan-ali">mohammad ali</option>
+            </select>
+          </div>
+          <div class="filter__icon">
+            <input type="date" name="date" id="theDate" class="" />
+          </div>
+        </div>
+
+        <!-- tab link -->
+        <div class="so__card-wrapper">
+          <div class="so__card-exit tablinks tablink1" onclick="inventory(event, 'outside')" id="defaultOpen">
+            <div>
+              <h2 class="so__card-title bn">বাহির</h2>
+              <p class="so__card-number">Tk 40,500</p>
+            </div>
+            <img src="images/icon/bahir.svg" alt="">
+          </div>
+          <div class="so__card-inside tablinks tablink2" onclick="inventory(event, 'inside')">
+            <div>
+              <h2 class="so__card-title bn">ভেতর</h2>
+              <p class="so__card-number inside">Tk 20,500</p>
+            </div>
+            <div>
+            <img src="images/icon/vetor.svg" alt="">
+
+            </div>
+          </div>
+          <div class="so__card-sell tablinks tablink3" onclick="inventory(event, 'sell')">
+            <div>
+              <h2 class="so__card-title bn">সেল</h2>
+              <p class="so__card-number sell">Tk 40,500</p>
+            </div>
+            <div>
+              <img src="images/icon/sell.svg" alt="">
+
+            </div>
+          </div>
+          <div class="so__card-damage tablinks tablink4" onclick="inventory(event, 'damage')">
+            <div>
+              <h2 class="so__card-title bn">ডেমেজ</h2>
+              <p class="so__card-number damage">Tk 500</p>
+            </div>
+            <div>
+              <img src="images/icon/damage.svg" alt="">
+
+            </div>
+          </div>
+        </div>
+  
+        <ul class="tabcontent" id="outside">
+          <li class="product__card">
+            <div class="product__card-title">
+              <h2 class="product__card-title-name bn">পণ্যের নাম</h2>
+              <div class="product__card-title-right">
+                <div>
+                  <img src="images/icon/bahir.svg" alt="" />
+                </div>
+                <p>বাহির</p>
+              </div>
+            </div>
+            <div class="product__card__bottom-wrapper">
+              <div class="product__card__bottom">
+                <h2>পরিমান</h2>
+                <div class="product__card__bottomkey-so">
+                  <p class="product__card__bottomkey">04 <button>B</button></p>
+                  <p class="product__card__bottomkey">14 <button>P</button></p>
+                </div>
+              </div>
+              <div class="product__card__bottom">
+                <h2>প্রতি পিস</h2>
+                <p>Tk 5</p>
+              </div>
+              <div class="total product__card__bottom">
+                <p>TK 10</p>
+              </div>
+            </div>
+          </li>
+          <li class="product__card">
+            <div class="product__card-title">
+              <h2 class="product__card-title-name bn">পণ্যের নাম</h2>
+              <div class="product__card-title-right">
+                <div>
+                  <img src="images/icon/bahir.svg" alt="" />
+                </div>
+                <p>বাহির</p>
+              </div>
+            </div>
+            <div class="product__card__bottom-wrapper">
+              <div class="product__card__bottom">
+                <h2>পরিমান</h2>
+                <div class="product__card__bottomkey-so">
+                  <p class="product__card__bottomkey">04 <button>B</button></p>
+                  <p class="product__card__bottomkey">14 <button>P</button></p>
+                </div>
+              </div>
+              <div class="product__card__bottom">
+                <h2>প্রতি পিস</h2>
+                <p>Tk 5</p>
+              </div>
+              <div class="total product__card__bottom">
+                <p>TK 10</p>
+              </div>
+            </div>
+          </li>
+          <li class="product__card">
+            <div class="product__card-title">
+              <h2 class="product__card-title-name bn">পণ্যের নাম</h2>
+              <div class="product__card-title-right">
+                <div>
+                  <img src="images/icon/bahir.svg" alt="" />
+                </div>
+                <p>বাহির</p>
+              </div>
+            </div>
+            <div class="product__card__bottom-wrapper">
+              <div class="product__card__bottom">
+                <h2>পরিমান</h2>
+                <div class="product__card__bottomkey-so">
+                  <p class="product__card__bottomkey">04 <button>B</button></p>
+                  <p class="product__card__bottomkey">14 <button>P</button></p>
+                </div>
+              </div>
+              <div class="product__card__bottom">
+                <h2>প্রতি পিস</h2>
+                <p>Tk 5</p>
+              </div>
+              <div class="total product__card__bottom">
+                <p>TK 10</p>
+              </div>
+            </div>
+          </li>
+          <li class="product__card">
+            <div class="product__card-title">
+              <h2 class="product__card-title-name bn">পণ্যের নাম</h2>
+              <div class="product__card-title-right">
+                <div>
+                  <img src="images/icon/bahir.svg" alt="" />
+                </div>
+                <p>বাহির</p>
+              </div>
+            </div>
+            <div class="product__card__bottom-wrapper">
+              <div class="product__card__bottom">
+                <h2>পরিমান</h2>
+                <div class="product__card__bottomkey-so">
+                  <p class="product__card__bottomkey">04 <button>B</button></p>
+                  <p class="product__card__bottomkey">14 <button>P</button></p>
+                </div>
+              </div>
+              <div class="product__card__bottom">
+                <h2>প্রতি পিস</h2>
+                <p>Tk 5</p>
+              </div>
+              <div class="total product__card__bottom">
+                <p>TK 10</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="tabcontent" id="inside">
+          <li class="product__card">
+            <div class="product__card-title">
+              <h2 class="product__card-title-name bn">পণ্যের নাম</h2>
+              <div class="product__card-title-right">
+                <div>
+                  <img src="images/icon/vetor.svg" alt="" />
+                </div>
+                <p>ভেতর</p>
+              </div>
+            </div>
+            <div class="product__card__bottom-wrapper">
+              <div class="product__card__bottom">
+                <h2>পরিমান</h2>
+                <div class="product__card__bottomkey-so">
+                  <p class="product__card__bottomkey">04 <button>B</button></p>
+                  <p class="product__card__bottomkey">14 <button>P</button></p>
+                </div>
+              </div>
+              <div class="product__card__bottom">
+                <h2>প্রতি পিস</h2>
+                <p>Tk 5</p>
+              </div>
+              <div class="total product__card__bottom">
+                <p>TK 10</p>
+              </div>
+            </div>
+          </li>
+          <li class="product__card">
+            <div class="product__card-title">
+              <h2 class="product__card-title-name bn">পণ্যের নাম</h2>
+              <div class="product__card-title-right">
+                <div>
+                  <img src="images/icon/vetor.svg" alt="" />
+                </div>
+                <p>ভেতর</p>
+              </div>
+            </div>
+            <div class="product__card__bottom-wrapper">
+              <div class="product__card__bottom">
+                <h2>পরিমান</h2>
+                <div class="product__card__bottomkey-so">
+                  <p class="product__card__bottomkey">04 <button>B</button></p>
+                  <p class="product__card__bottomkey">14 <button>P</button></p>
+                </div>
+              </div>
+              <div class="product__card__bottom">
+                <h2>প্রতি পিস</h2>
+                <p>Tk 5</p>
+              </div>
+              <div class="total product__card__bottom">
+                <p>TK 10</p>
+              </div>
+            </div>
+          </li>
+          <li class="product__card">
+            <div class="product__card-title">
+              <h2 class="product__card-title-name bn">পণ্যের নাম</h2>
+              <div class="product__card-title-right">
+                <div>
+                  <img src="images/icon/vetor.svg" alt="" />
+                </div>
+                <p>ভেতর</p>
+              </div>
+            </div>
+            <div class="product__card__bottom-wrapper">
+              <div class="product__card__bottom">
+                <h2>পরিমান</h2>
+                <div class="product__card__bottomkey-so">
+                  <p class="product__card__bottomkey">04 <button>B</button></p>
+                  <p class="product__card__bottomkey">14 <button>P</button></p>
+                </div>
+              </div>
+              <div class="product__card__bottom">
+                <h2>প্রতি পিস</h2>
+                <p>Tk 5</p>
+              </div>
+              <div class="total product__card__bottom">
+                <p>TK 10</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="tabcontent" id="sell">
+          <li class="product__card">
+            <div class="product__card-title">
+              <h2 class="product__card-title-name bn">পণ্যের নাম </h2>
+              <div class="product__card-title-right">
+                <div>
+                  <img src="images/icon/sell.svg" alt="" />
+                </div>
+                <p>সেল</p>
+              </div>
+            </div>
+            <div class="product__card__bottom-wrapper">
+              <div class="product__card__bottom">
+                <h2>পরিমান</h2>
+                <div class="product__card__bottomkey-so">
+                  <p class="product__card__bottomkey">04 <button>B</button></p>
+                  <p class="product__card__bottomkey">14 <button>P</button></p>
+                </div>
+              </div>
+              <div class="product__card__bottom">
+                <h2>O/C</h2>
+                <p class="sell-oc">-1220</p>
+              </div>
+              <div class="total product__card__bottom">
+                <p class="sell-tk">TK 10</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="tabcontent" id="damage">
+          <li class="damage_List">
+            <div class="profile__data">
+              <img src="images/user.png" alt="" />
+              <div>
+                <h2 class="profile__name">মুহাম্মদ রাসেল</h2>
+                <p class="profile__plase">কাশেমের মোড়</p>
+              </div>
+            </div>
+            <button class="profile__card-btn">Tk 500</button>
+          </li>
+          <li class="damage_List">
+            <div class="profile__data">
+              <img src="images/user.png" alt="" />
+              <div>
+                <h2 class="profile__name">মুহাম্মদ রাসেল</h2>
+                <p class="profile__plase">কাশেমের মোড়</p>
+              </div>
+            </div>
+            <button class="profile__card-btn">Tk 500</button>
+          </li>
+        </ul>
+      </div>
+  
+        <!-- mobile nav -->
+        <div class="nav-container">
+          <nav class="navigation">
+          <ul class="navigation__list">
+              <li class="navigation__item">
+              <a class="navigation__link" href="home.html">
+                  <i class="navigation__icon" data-feather="home"></i>
+                  <span class="navigation__text">HOME</span>
+              </a>
+              </li>
+              <li class="navigation__item">
+              <a href="so.html" class="navigation__link ">
+                  <i class="navigation__icon" data-feather="user"></i>
+                  <span class="navigation__text">SO</span>
+              </a>
+              </li>
+              <li class="navigation__item">
+              <a class="navigation__link" href="Profit.html">
+                  <i class="navigation__icon" data-feather="dollar-sign"></i>
+                  <span class="navigation__text">Profit</span>
+              </a>
+              </li>
+              <li class="navigation__item">
+              <a class="navigation__link active" href="Inventory.html">
+                  <i class="navigation__icon" data-feather="clipboard"></i>
+                  <span class="navigation__text">Inventory</span>
+              </a>
+              </li>
+          </ul>
+          </nav>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="js/index.js"></script>
+    <!-- date -->
+    <script>
+      var date = new Date();
+
+      var day = date.getDate();
+      var month = date.getMonth() + 1;
+      var year = date.getFullYear();
+
+      if (month < 10) month = "0" + month;
+      if (day < 10) day = "0" + day;
+
+      var today = year + "-" + month + "-" + day;
+
+
+      document.getElementById('theDate').value = today;
+  </script>
+  
+  <!-- tab -->
+
+  <script>
+    function inventory(evt, inventory) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(inventory).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+<script>
+    feather.replace();
+  const links = document.querySelectorAll(".navigation__link");
+
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (!link.classList.contains("active")) {
+        const active = document.querySelector(".navigation__link.active");
+        if (active !== null) {
+          active.classList.remove("active");
+        }
+        link.classList.add("active");
+
+        // Delay opening the page by 1 second
+        setTimeout(() => {
+          window.location.href = link.getAttribute("href");
+        }, 500); // 1000 milliseconds = 1 second
+      }
+    });
+  });
+</script>
+  </body>
+</html>

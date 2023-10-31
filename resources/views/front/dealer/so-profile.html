@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>So Profile</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
+    <link rel="stylesheet" href="css/so-profile.css" />
+    <link rel="stylesheet" href="main.css">
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+</head>
+
+<body>
+
+  <div class="mobile_container">
+    <div class="container">
+      <div class="navbar">
+          <div class="navbar__left">
+            <a href="so.html" class="login__navbar">
+              <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                  <circle cx="20.5" cy="20.5" r="20.5" fill="#F8F8FB" />
+                  <path d="M23 15L17 21L23 27" stroke="#8A94A6" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+          </a>
+              <h2 class="navbar__title">Profile</h2>
+          </div>
+          <a href="login.html" class="logout__button">Logout <img src="images/icon/logout.svg" alt="" /></a>
+      </div>
+      <div class="profile">
+          <img src="images/user2.png" alt="">
+          <h2 class="profile__name">Muhammad Rasel</h2>
+          <p class="profile__company">Pran Food & Bavreage</p>
+      </div>
+      <div class="total__section">
+          <div class="total__order-wrapper">
+              <h2 class="total__order">TOTAL ORDER</h2>
+              <p class="total__order-number">686</p>
+          </div>
+          <div class="total__order-wrapper">
+              <h2 class="total__order">CANCELED</h2>
+              <p class="total__order-number">86</p>
+          </div>
+          <div class="total__order-wrapper">
+              <h2 class="total__order">DELIVERD</h2>
+              <p class="total__order-number">286</p>
+          </div>
+          <div class="total__order-wrapper">
+              <h2 class="total__order">O/C</h2>
+              <p class="total__order-number minus__number">-1000৳</p>
+          </div>
+      </div>
+      <div class="dashboard-profile__statistics">
+        <div class="dashboard-profile__statistics-top-area">
+            <h2 class="dashboard-profile__statistics-title">Analytics</h2>
+          <select class="dashboard-profile__statistics-select">
+            <option value="week">This Week</option>
+            <option value="month">This Month</option>
+          </select>
+        </div>
+        <div class="dashboard-profile__statistics-chart-container">
+          <canvas id="dashboard-profile-statistics-chart"  class="dashboard-profile-statistics-chart"></canvas>
+        </div>
+        <div class="dashboard-profile__statistics-persons">
+          <div class="dashboard-profile__statistics-persons-left-side">
+            <span></span>
+            <span>Sale</span>
+          </div>
+          <div class="dashboard-profile__statistics-persons-right-side">
+            <span></span>
+            <span>Cancel</span>
+          </div>
+        </div>
+      </div>
+  </div>
+
+<!-- mobile nav -->
+<div class="nav-container">
+  <nav class="navigation">
+    <ul class="navigation__list">
+      <li class="navigation__item">
+        <a class="navigation__link" href="home.html">
+          <i class="navigation__icon" data-feather="home"></i>
+          <span class="navigation__text">HOME</span>
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a href="so.html" class="navigation__link active">
+          <i class="navigation__icon" data-feather="user"></i>
+          <span class="navigation__text">SO</span>
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link" href="Profit.html">
+          <i class="navigation__icon" data-feather="dollar-sign"></i>
+          <span class="navigation__text">Profit</span>
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link" href="Inventory.html">
+          <i class="navigation__icon" data-feather="clipboard"></i>
+          <span class="navigation__text">Inventory</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+  </div>
+
+      <script src="https://unpkg.com/feather-icons"></script>
+      <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/dashboardProfile.js"></script>
+</body>
+
+</html>

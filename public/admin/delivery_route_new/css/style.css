@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.addNewDealer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.addNewDealer {
+  width: 490px;
+
+  border-radius: 12px;
+  background: #FFF;
+  padding: 30px;
+
+  /* shadow-sm */
+  box-shadow: 0px 10px 20px 0px rgba(5, 46, 128, 0.03);
+}
+
+.addNewDealer__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.addNewDealer__navbar-title {
+  color: var(--black, #222950);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  /* 166.667% */
+}
+
+.addNew__route-title {
+  color: var(--black-2, #595F84);
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  /* 200% */
+}
+
+.addNew__route-field {
+  width: 100%;
+  padding: 20px 0 20px 20px;
+  color: var(--gray, #8A94A6);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  border-radius: 8px;
+  border: 1px solid #C6D7EF;
+  background-image: url(../assets/Vector.png);
+  background-position: 400px 30px;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+
+
+.addNewDealer__submit {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  margin: 55px 0 15px 0;
+}
+
+.addNewDealer__submit-btn {
+  display: flex;
+  padding: 10px 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 7px;
+  border: 1px solid rgba(255, 12, 56, 0.22);
+  background: #FFF;
+  color: #FF565E;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 16.8px */
+  letter-spacing: 0.2px;
+}
+
+.addNewDealer__submit-savebtn {
+  display: flex;
+  padding: 10px 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 7px;
+  background: var(--blue, #007AFF);
+  color: #FFF;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 16.8px */
+  letter-spacing: 0.2px;
+  border: none;
+}

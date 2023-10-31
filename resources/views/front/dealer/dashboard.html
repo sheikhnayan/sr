@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+
+<div class="mobile_container">
+  <div class="container">
+    <div class="navbar">
+      <a href="home.html" class="login__navbar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+              <circle cx="20.5" cy="20.5" r="20.5" fill="#F8F8FB"></circle>
+              <path d="M23 15L17 21L23 27" stroke="#8A94A6" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+      </a>
+      <h2 class="navbar__title">Dashboard</h2>
+      <span style="width: 41px;"></span>
+  </div>
+  <div class="overview_container">
+    <div class="overview_wrapper">
+      <div class="total__sell-card">
+        <div class="date__filter">
+            <select>
+              <option value="date">Date</option>
+              <option value="date">Date</option>
+              <option value="date">Date</option>
+            </select>
+          </div>
+        <div>
+            <img src="images/icon/total-sell.svg" alt="">
+        </div>
+        <div>
+            <p class="total__title">Total Sell</p>
+            <h2 class="total__ammount">৳ 50,2000 <span>+12%</span></h2>
+        </div>
+    </div>
+    <div class="total__sell-card">
+      <div class="date__filter">
+          <select>
+            <option value="date">Date</option>
+            <option value="date">Date</option>
+            <option value="date">Date</option>
+          </select>
+        </div>
+      <div>
+          <img src="images/icon/profit.svg" alt="">
+      </div>
+      <div>
+          <p class="total__title">Total Profit</p>
+          <h2 class="total__ammount">৳ 20,00 <span>+2.5%</span></h2>
+      </div>
+  </div>
+    </div>
+    <div class="dashboard__chart">
+      <div class="dashboard__chart-container">
+        <div class="dashboard__over-sell">
+          <h6 class="dasbhoard__sell">Overall Sell</h6>
+          <h5 class="dashboard__amount">৳48,574.21 <span>+20%</span></h5>
+        </div>
+        <select class="top__select-date" style="min-width: 100px;">
+          <option value="date">this-week</option>
+          <option value="date">this-month</option>
+          <option value="date">this-year</option>
+          <option value="date">life-time</option>
+        </select>
+      </div>
+      <canvas id="dashboard-chart" class="dashboard__main-chart"></canvas>
+    </div>
+    <div class="dashboard__chart">
+      <div class="dashboard__chart-container">
+        <div class="dashboard__over-sell">
+          <h6 class="dasbhoard__sell">Overall Revenue</h6>
+          <h5 class="dashboard__amount">৳48,574.21 <span>+20%</span></h5>
+        </div>
+        <select class="top__select-date" style="min-width: 100px;">
+          <option value="date">this-week</option>
+          <option value="date">this-month</option>
+          <option value="date">this-year</option>
+          <option value="date">life-time</option>
+        </select>
+      </div>
+      <canvas id="dashboard-chart2" class="dashboard__main-chart"></canvas>
+    </div>
+    <div class="dashboard__statistics">
+      <div class="dashboard__statistics-top-area">
+          <h2 class="dashboard__statistics-title">Statistic </h2>
+        <select class="top__select-date" style="min-width: 100px;">
+          <option value="date">this-week</option>
+          <option value="date">this-month</option>
+          <option value="date">this-year</option>
+          <option value="date">life-time</option>
+        </select>
+      </div>
+      <div class="dashboard__statistics-chart-container">
+        <canvas id="dashboard-statistics-chart"  class="dashboard-statistics-chart"></canvas>
+      </div>
+      <div class="dashboard__statistics-persons">
+        <div class="dashboard__statistics-persons-left-side">
+          <span></span>
+          <span>SO: Rasel</span>
+        </div>
+        <div class="dashboard__statistics-persons-right-side">
+          <span></span>
+          <span>SO: Rasel</span>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  </div>
+</div>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script src="js/index.js"></script>
+  </body>
+</html>

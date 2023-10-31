@@ -1,0 +1,108 @@
+body {
+  /* font-family: 'Baloo Da 2', cursive;
+    font-family: 'Plus Jakarta Sans', sans-serif; */
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 37px 25px 35px 27px;
+}
+
+.login__navbar {
+}
+
+.login__banner {
+  text-align: center;
+  margin-top: 54px;
+}
+
+.login__logo {
+  text-align: center;
+}
+
+.login__name-field {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.login__name-field input {
+  width: 100%;
+  padding: 19px 20px 19px 4rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7f0;
+  font-family: "Baloo Da 2";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  background: #fff;
+  background-image: url(./../images/phone.png);
+  background-repeat: no-repeat;
+  background-position: 1rem 50%;
+}
+
+.login__password-field {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.login__password-field input {
+  width: 100%;
+  padding: 19px 20px 19px 4rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7f0;
+  font-family: "Baloo Da 2";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  background: #fff;
+  background-image: url(./../images/lock.png);
+  background-repeat: no-repeat;
+  background-position: 1rem 50%;
+}
+
+.login__forget-password {
+  color: #007aff;
+  text-align: right;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.36px;
+}
+
+.login__button {
+  display: flex;
+  width: 100%;
+  padding: 19px 18px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #258aff 0%, #0063ff 100%);
+  color: #fff;
+  font-family: "Baloo Da 2";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 24px;
+  border: none;
+  margin-top: 42px;
+  cursor: pointer;
+}
+
+.login__button:hover {
+  background: transparent;
+  border: 1px solid #258aff;
+  color: #258aff;
+}

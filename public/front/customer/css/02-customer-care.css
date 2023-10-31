@@ -1,0 +1,529 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family="Inter":wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Baloo Da 2', sans-serif;
+    font-family: "Inter", sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    display: contents;
+}
+
+.container {
+    padding: 28px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customar__profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+.customar__name {
+    color: var(--black, #222950);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    margin: 0 0 5px 0;
+}
+
+.customar__title {
+    color: var(--gray, #8A94A6);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 133.714%;
+    /* 18.72px */
+    letter-spacing: 0.42px;
+    margin: 0;
+}
+
+.pending-wrapper {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 50px;
+    background: #F7F8FA;
+    padding: 7px;
+    margin-top: 23px;
+    margin-bottom: 23px;
+}
+
+.pending {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #222950;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 50px;
+    background: #FFF;
+    box-shadow: 0px 5px 10px 0px rgba(5, 46, 128, 0.06);
+}
+
+.nobg{
+    background-color: transparent;
+    background: transparent;
+    box-shadow: none;
+}
+.pending p {
+    color: var(--black-2, #595F84);
+    font-family: "Plus Jakarta Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    margin: 0;
+    /* 19.2px */
+}
+
+.customar__btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.customar__btn {
+    width: 100%;
+}
+
+.oppo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 47px;
+    padding: 12px 13px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid rgba(46, 49, 133, 0.08);
+    box-shadow: 0px 10px 20px 0px rgba(5, 46, 128, 0.05);
+    cursor: pointer;
+}
+
+.oppo:hover {
+    border: 1px solid rgba(0, 122, 255, 0.43);
+    background: #F7FBFF;
+    box-shadow: 0px 10px 20px 0px rgba(5, 46, 128, 0.05);
+}
+
+.oppo:hover .customar__nam {
+    color: #007AFF;
+}
+
+.customar__nam {
+    color: var(--black-2, #595F84);
+    font-family: "Baloo Da 2";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.customar__count {
+    color: #FF565E;
+    font-family: "Plus Jakarta Sans";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+}
+
+
+.pending-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid rgba(46, 49, 133, 0.08);
+    background: #FFF;
+    padding: 15px;
+    margin-bottom: 18px;
+}
+
+.profile-name {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-name p {
+    color: var(--black, #222950);
+    text-align: left;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Baloo Da 2";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+
+}
+
+.profile-name p span{
+    color: var(--black-2, #595F84);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Baloo Da 2";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 0;
+}
+
+.profile__right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pending-profile-wrapper {
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 10px 20px 0px rgba(5, 46, 128, 0.05);
+    padding: 15px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(46, 49, 133, 0.08);
+
+}
+
+.pending-profile-wrapper .pending-profile {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.button__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 13px;
+    margin-bottom: 12px;
+}
+
+.view__btn {
+    width: 100%;
+    height: 35px;
+    padding: 7px 16px;
+    border-radius: 7px;
+    background: rgba(245, 98, 98, 0.06);
+    color: #F56262;
+    font-family: "Baloo Da 2";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    border: none;
+    cursor: pointer;
+}
+
+.paid__btn {
+    width: 100%;
+    height: 35px;
+    padding: 7px 16px;
+    border-radius: 7px;
+    background: rgba(0, 122, 255, 0.06);
+    color: #007AFF;
+    font-family: "Baloo Da 2";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 0 15px;
+    margin-bottom: 24px;
+}
+
+.cancel__btn button {
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    height: 35px;
+    padding: 7px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    background: rgba(89, 95, 132, 0.05);
+    color: var(--black-2, #595F84);
+    font-family: "Baloo Da 2";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    border: none;
+    margin: auto;
+}
+
+
+/* Agrohi Popuup */
+
+.agrohi-popup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #ffffffc9;
+    left: -9999px;
+    height: 100vh;
+    padding: 0 27px;
+}
+
+.show-agrohi-popup{
+    left: 0;
+}
+
+.agrohi-popup-compelete__wrap {
+    width: 100%;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 10px 40px 0px rgba(0, 25, 73, 0.10);
+    text-align: center;
+    padding: 26px 20px 21px 20px;
+}
+
+.agrohi-popup-compelete__title {
+    color: var(--black, #222950);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Baloo Da 2";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    /* 228.571% */
+}
+
+.agrohi-popup-compelete__des {
+    color: var(--gray, #8A94A6);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Baloo Da 2";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 200% */
+}
+
+.agrohi-popup-time__field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 26px;
+}
+
+.agrohi-popup-time__field button {
+    color: var(--gray, #8A94A6);
+    font-family: "Baloo Da 2";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: inline-flex;
+    padding: 12px 13px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 122, 255, 0.12);
+    background: rgba(0, 122, 255, 0.04);
+}
+
+.agrohi-popup-time__field button:hover {
+    color: var(--blue, #007AFF);
+    border: 1px solid rgba(0, 122, 255, 0.49);
+    background: rgba(0, 122, 255, 0.04);
+}
+
+.agrohi-popup-button__group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 22px;
+}
+
+.agrohi-popup-cancel__btn {
+    color: #263238;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    display: flex;
+    width: 100%;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #E5E7F0;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.agrohi-popup-confirm__btn {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    display: flex;
+    width: 100%;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: none;
+    border-radius: 10px;
+    background: var(--g, linear-gradient(180deg, #258AFF 0%, #0063FF 100%));
+    cursor: pointer;
+}
+
+
+
+/* Onagrhoi poupu */
+.onagrohi-popup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #ffffffc9;
+    left: -9999px;
+    height: 100vh;
+    padding: 0 27px;
+}
+
+.show-onagrohi-popup{
+    left: 0;
+}
+
+.onagrohi-popup-compelete__wrap {
+    width: 100%;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 10px 40px 0px rgba(0, 25, 73, 0.10);
+    text-align: center;
+    padding: 26px 20px 21px 20px;
+}
+
+.onagrohi-popup-compelete__title {
+    color: var(--black, #222950);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Baloo Da 2";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    /* 228.571% */
+}
+
+.onagrohi-popup-compelete__des {
+    color: var(--gray, #8A94A6);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Baloo Da 2";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 200% */
+}
+
+.onagrohi-popup-cause__field {
+    width: 100%;
+    display: flex;
+    margin-top: 22px;
+}
+
+.onagrohi-popup-cause__field select {
+    display: flex;
+    width: 100%;
+    padding: 12px 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #E5E7F0;
+    background: #FFF;
+    color: var(--black-2, #595F84);
+    font-family: "Baloo Da 2";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+}
+
+.onagrohi-popup-button__group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 22px;
+}
+
+.onagrohi-popup-cancel__btn {
+    color: #263238;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    display: flex;
+    width: 100%;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #E5E7F0;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.onagrohi-popup-confirm__btn {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    display: flex;
+    width: 100%;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: none;
+    border-radius: 10px;
+    background: var(--g, linear-gradient(180deg, #258AFF 0%, #0063FF 100%));
+    cursor: pointer;
+}

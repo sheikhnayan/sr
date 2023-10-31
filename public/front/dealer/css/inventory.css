@@ -1,0 +1,650 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+.container {
+    padding: 37px 25px 150px 27px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__title {
+    width: 100%;
+    color: var(--black, #222950);
+    text-align: center;
+    font-family: "Plus Jakarta Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: 133.714%;
+    /* 24.069px */
+    letter-spacing: 0.54px;
+    text-transform: capitalize;
+}
+
+.name__filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+/* Style the tab content */
+.tabcontent {
+    display: none;
+}
+.tablink1.active {
+    border: 1px solid #0caf60b2;
+    }
+    .tablink2.active {
+    border: 1px solid #8F94FFb2;
+    }
+    .tablink3.active {
+    border: 1px solid #1D6AFFb2;
+    }
+    .tablink4.active {
+    border: 1px solid #EB7178b2;
+    }
+
+
+.name__field {
+    width: 100%;
+}
+
+.name__field select {
+    width: 100%;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 8.65px;
+    background: #F8F8FB;
+    color: var(--black-2, #595F84);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Baloo Da 2";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+    padding-left: 15px;
+}
+
+.filter__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter__icon input{
+    height: 40px;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: #595F84;
+}
+
+.so__card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.so__card-exit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21px 20px 20px 18px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #F3FBF7;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+}
+
+.so__card-exit:hover {
+    border: 1px solid #0CAF60;
+}
+
+.so__card-title {
+    color: var(--black-2, #595F84);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+}
+.Inventory-tab img {
+    width: 20px;
+}
+.so__card-number {
+    color: #0CAF60;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.inside {
+    color: #8F94FF;
+}
+
+.so__card-inside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21px 20px 20px 18px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #F9F9FF;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+}
+
+.so__card-inside:hover {
+    border: 1px solid #8F94FF;
+}
+
+.sell {
+    color: #1D6AFF;
+}
+
+.so__card-sell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21px 20px 20px 18px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #F9F9FF;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.so__card-sell:hover {
+    border: 1px solid #1D6AFF;
+}
+
+.damage {
+    color: #EB7178;
+}
+
+.so__card-damage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21px 20px 20px 18px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #FEFAFB;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.so__card-damage:hover {
+    border: 1px solid #EB7178;
+}
+
+.product__card {
+    border-radius: 8px;
+    border: 1px solid var(--greyscale-100, #F1F5F9);
+    background: #F8FAFC;
+    margin-bottom: 15px;
+}
+
+.product__card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 17px 15px 17px;
+    align-items: self-end;
+}
+
+.product__card-title-name {
+    color: var(--black, #222950);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: " Baloo Da 2";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.5px;
+}
+
+.product__card-title-inside {
+    color: #595F84;
+    text-align: right;
+    font-family: "Baloo Da 2";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+    /* 17.6px */
+}
+
+.product__card-title-right {
+    display: flex;
+    gap: 8px;
+    font-family: "Baloo Da 2";
+    font-size: 13px;
+    font-weight: 600;
+    color: #595F84;
+}
+.product__card-title-right img{
+    width: 16px;
+}
+.product__card__bottom {
+    padding: 15px 27px 10px 21px;
+    border-right: 1px solid #F0F4F9;
+}
+
+.product__card__bottom:last-of-type {
+    border: none;
+}
+
+.product__card__bottom h2 {
+    color: var(--black-2, #595F84);
+    font-family: "Baloo Da 2";
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.product__card__bottom p {
+    color: var(--black-2, #595F84);
+    font-family: "Baloo Da 2";
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.product__card__bottomkey {
+    color: var(--black-2, #595F84);
+    font-family: "Plus Jakarta Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.product__card__bottomkey button {
+    display: inline-flex;
+    padding: 0px 3px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 2px;
+    border: 0.2px solid rgba(138, 148, 166, 0.29);
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 72, 151, 0.05);
+    color: var(--black-2, #595F84);
+    text-align: center;
+    font-size: 10px;
+    font-weight: 600;
+    margin-left: 6px;
+}
+
+.product__card__bottomkey-so {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.total p {
+    color: var(--blue, #007AFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Baloo Da 2";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.product__card__bottom-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid var(--greyscale-100, #F1F5F9);
+    border-radius: 8px 8px 0 0;
+    background-color: #fff;
+}
+
+/* Inventory 2 */
+#Inventory-content-3 .product__card {
+    border-radius: 8px;
+    border: 1px solid var(--greyscale-100, #F1F5F9);
+    background: #F8FAFC;
+    margin-top: 30px;
+}
+
+#Inventory-content-3 .product__card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 17px 15px 17px;
+
+}
+
+#Inventory-content-3 .product__card-title-name {
+    color: var(--black, #222950);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Baloo Da 2";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.5px;
+}
+
+#Inventory-content-3 .product__card-title-inside {
+    color: #595F84;
+    text-align: right;
+    font-family: "Baloo Da 2";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+}
+
+#Inventory-content-3 .product__card-title-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Baloo Da 2";
+}
+
+#Inventory-content-3 .product__card__bottom {
+    padding: 15px 27px 10px 21px;
+    border-right: 1px solid #F0F4F9;
+}
+
+#Inventory-content-3 .product__card__bottom:last-of-type {
+    border: none;
+}
+
+#Inventory-content-3 .product__card__bottom h2 {
+    color: var(--black-2, #595F84);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Baloo Da 2";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+#Inventory-content-3 .oc_minus {
+    color: #FF565E;
+}
+
+#Inventory-content-3 .product__card__bottomkey {
+    color: var(--black-2, #595F84);
+    font-family: "Plus Jakarta Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#Inventory-content-3 .product__card__bottomkey button {
+    display: inline-flex;
+    padding: 0px 3px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 2px;
+    border: 0.2px solid rgba(138, 148, 166, 0.29);
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 72, 151, 0.05);
+    color: var(--black-2, #595F84);
+    text-align: center;
+    font-family: "Plus Jakarta Sans";
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 6px;
+}
+
+#Inventory-content-3 .product__card__bottomkey-so {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#Inventory-content-3 .total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Inventory-content-3 .total p {
+    color: var(--blue, #007AFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Baloo Da 2";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.5px;
+}
+
+#Inventory-content-3.product__card__bottom-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid var(--greyscale-100, #F1F5F9);
+    border-radius: 8px 8px 0 0;
+    background-color: #fff;
+}
+
+
+
+/* Inventory-3 */
+
+.profile__data {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.profile__data img{
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 11px; 
+}
+.profile__name {
+    color: var(--black, #222950);
+    text-align: center;
+    font-family: "Baloo Da 2";
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.profile__plase {
+    color: var(--gray, #8A94A6);
+    font-family: "Baloo Da 2";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.profile__card-btn {
+    display: inline-flex;
+    padding: 10px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    background: #FFFAFA;
+    color: #F56262;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+}
+.profile__card-btn:hover {
+    background: #F56262;
+    color: white;
+    cursor: pointer;
+}
+.profile__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 19px 16px 17px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 10px 20px 0px rgba(5, 46, 128, 0.05);
+    margin-top: 25px;
+}
+
+
+
+  
+/* Mobile Navigation */
+
+.nav-container {
+    padding: 10px 24px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px 20px 0px 0px;
+    background: #fff;
+    box-shadow: 0px -5px 50px 0px rgba(0, 45, 94, 0.12);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .navigation {
+    width: 100%;
+  }
+  .navigation__list {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+  .navigation__item {
+    perspective: 100px;
+  }
+  .navigation__link {
+    font-size: 12px;
+    text-decoration: none;
+    color: #8a94a6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    padding: 5px 30px;
+    overflow: hidden;
+    position: relative;
+    outline: none;
+  }
+  .navigation__link::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 15px;
+    background-color: #007bff83;
+    position: absolute;
+    transform: translateY(60px) scale(0.4);
+    transition: all 0.35s cubic-bezier(0, 0.51, 0, 0.99);
+    opacity: 0;
+  }
+  .navigation__icon {
+    transition: all 0.35s ease;
+    will-change: opacity, transform, background-color;
+  }
+  .navigation__text {
+    position: absolute;
+    transform: translateY(60px) skewY(-20deg);
+    transform-origin: left bottom;
+    color: #007aff;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 0.35s ease;
+    will-change: opacity, transform, background-color;
+    text-transform: uppercase;
+  }
+  .navigation__link.active .navigation__icon {
+    transform: translateY(-60px) rotateX(90deg) scale(0.4) skewY(-30deg);
+    opacity: 0;
+  }
+  .navigation__link.active .navigation__text {
+    opacity: 1;
+    transform: translateY(-3px) skewY(0deg);
+  }
+  .navigation__link.active::before {
+    transform: translateY(12px) scale(1);
+    transition: all 0.35s cubic-bezier(0, 0.51, 0, 0.99) 0.2s;
+    opacity: 1;
+  }
+  @keyframes dotAnime {
+    0% {
+      transform: translateY(60px) scale(0.4);
+      opacity: 0;
+    }
+    75% {
+      transform: translateY(-3px) scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(12px);
+      opacity: 1;
+    }
+  }
+  @keyframes textAnime {
+    from {
+      transform-origin: right center;
+      transform: skewY(0) translateY(0);
+    }
+    25% {
+      transform: skewY(0) translateY(0);
+    }
+    60% {
+      transform: skewY(-12deg) translateY(-22px);
+    }
+    to {
+      transform: skewY(0) translateY(-3px);
+    }
+  }
+  
+  @media (min-width: 450px) {
+    .tabcontent{
+        max-height: 350px;
+        overflow: auto;
+        padding-bottom: 20px;
+    }
+  }
+  .sell-oc{
+    color: #FF565E !important;
+  }
+  .sell-tk{
+    color: #595F84 !important;
+  }
+  .damage_List {
+    display: flex;
+    border: 1px solid #f3f3f3;
+    justify-content: space-between;
+    padding: 22px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 14px 0px #052e800d;
+    align-items: center;
+    margin-bottom: 15px;
+}
+

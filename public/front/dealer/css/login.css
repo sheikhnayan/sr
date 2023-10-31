@@ -1,0 +1,220 @@
+
+
+.container {
+    padding: 37px 25px 35px 27px;
+}
+
+.login__banner {
+    text-align: center;
+    margin-top: 54px;
+}
+
+.login__logo {
+    text-align: center;
+    margin-top: 76px;
+}
+
+.login__name-field input {
+    display: flex;
+    width: 100%;
+    padding: 19px 0 19px 50px;
+    align-items: center;
+    gap: 15px;
+    color: #8A94A6;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    border-radius: 12px;
+    border: 1px solid #E5E7F0;
+    background: #FFF;
+    background-image: url(./../images/phone.png);
+    background-repeat: no-repeat;
+    background-position: 18px 20px;
+    margin-top: 42px;
+}
+
+.login__password-field input {
+    display: flex;
+    width: 100%;
+    padding: 19px 0 19px 50px;
+    align-items: center;
+    gap: 15px;
+    color: #8A94A6;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* 137.5% */
+    border-radius: 12px;
+    border: 1px solid #E5E7F0;
+    background: #FFF;
+    background-image: url(./../images/lock.png);
+    background-repeat: no-repeat;
+    background-position: 18px 20px;
+    margin-top: 20px;
+}
+
+.login__forget-password {
+    color: #007AFF;
+    text-align: right;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 10px;
+    letter-spacing: 0.36px;
+}
+.login_img{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+.login_img img{
+  width: 75%;
+  height: 100%;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+}
+.login__button {
+    display: flex;
+    width: 100%;
+    padding: 19px 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #258AFF 0%, #0063FF 100%);
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    border: none;
+    margin-top: 42px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.login__button:hover{
+    background: linear-gradient(80deg, #258AFF 0%, #0063FF 100%);
+}
+
+/* Mobile Navigation */
+/* navigation */
+
+.nav-container {
+    padding: 10px 24px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px 20px 0px 0px;
+    background: #fff;
+    box-shadow: 0px -5px 50px 0px rgba(0, 45, 94, 0.12);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .navigation {
+    width: 100%;
+  }
+  .navigation__list {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+  .navigation__item {
+    perspective: 100px;
+  }
+  .navigation__link {
+    font-size: 12px;
+    text-decoration: none;
+    color: #8a94a6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    padding: 5px 30px;
+    overflow: hidden;
+    position: relative;
+    outline: none;
+  }
+  .navigation__link::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 15px;
+    background-color: #007bff83;
+    position: absolute;
+    transform: translateY(60px) scale(0.4);
+    transition: all 0.35s cubic-bezier(0, 0.51, 0, 0.99);
+    opacity: 0;
+  }
+  .navigation__icon {
+    transition: all 0.35s ease;
+    will-change: opacity, transform, background-color;
+  }
+  .navigation__text {
+    position: absolute;
+    transform: translateY(60px) skewY(-20deg);
+    transform-origin: left bottom;
+    color: #007aff;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 0.35s ease;
+    will-change: opacity, transform, background-color;
+    text-transform: uppercase;
+  }
+  .navigation__link.active .navigation__icon {
+    transform: translateY(-60px) rotateX(90deg) scale(0.4) skewY(-30deg);
+    opacity: 0;
+  }
+  .navigation__link.active .navigation__text {
+    opacity: 1;
+    transform: translateY(-3px) skewY(0deg);
+  }
+  .navigation__link.active::before {
+    transform: translateY(12px) scale(1);
+    transition: all 0.35s cubic-bezier(0, 0.51, 0, 0.99) 0.2s;
+    opacity: 1;
+  }
+  @keyframes dotAnime {
+    0% {
+      transform: translateY(60px) scale(0.4);
+      opacity: 0;
+    }
+    75% {
+      transform: translateY(-3px) scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(12px);
+      opacity: 1;
+    }
+  }
+  @keyframes textAnime {
+    from {
+      transform-origin: right center;
+      transform: skewY(0) translateY(0);
+    }
+    25% {
+      transform: skewY(0) translateY(0);
+    }
+    60% {
+      transform: skewY(-12deg) translateY(-22px);
+    }
+    to {
+      transform: skewY(0) translateY(-3px);
+    }
+  }
+  

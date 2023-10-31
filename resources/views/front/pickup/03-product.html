@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/03-product.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div>
+          <a href="02-dealer list.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="41"
+              height="41"
+              viewBox="0 0 41 41"
+              fill="none"
+            >
+              <circle cx="20.5" cy="20.5" r="20.5" fill="#F8F8FB" />
+              <path
+                d="M23 15L17 21L23 27"
+                stroke="#8A94A6"
+                stroke-width="1.875"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+        <h2 class="navbar__title">মোহাম্মদ নাজমুল আলী</h2>
+      </div>
+
+      <select class="selection">
+        <option value="select_sr">Select Sr</option>
+        <option value="select_sr">Select Sr</option>
+        <option value="select_sr">Select Sr</option>
+        <option value="select_sr">Select Sr</option>
+      </select>
+      <div>
+        <div class="Product-card">
+          <div class="product-detail">
+            <div>
+              <img src="./images/product.png" alt="" />
+            </div>
+            <div class="product-title">
+              <h2 class="product__name">মিল্ক বিস্কুট</h2>
+              <div class="group-1">
+                <div class="count">
+                  <p>04</p>
+                  <span>B</span>
+                  <p>14</p>
+                  <span>P</span>
+                  <h3>Out</h3>
+                  <p>04</p>
+                  <span>B</span>
+                  <p>14</p>
+                  <span>P</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="edit-wrapper">
+            <div class="edit">
+              <img src="./images/edit.png" alt="" />
+              <p>Edit</p>
+            </div>
+            <div class="complete">
+              <img src="./images/complete.png" alt="" />
+              <p>Complete</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="Product-card">
+          <div class="product-detail">
+            <div>
+              <img src="./images/product.png" alt="" />
+            </div>
+            <div class="product-title">
+              <h2 class="product__name">মিল্ক বিস্কুট</h2>
+              <div class="group-1">
+                <div class="count">
+                  <p>04</p>
+                  <span>B</span>
+                  <p>14</p>
+                  <span>P</span>
+                  <h3>Out</h3>
+                  <p>04</p>
+                  <span>B</span>
+                  <p>14</p>
+                  <span>P</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="edit-wrapper">
+            <div class="edit">
+              <img src="./images/edit.png" alt="" />
+              <p>Edit</p>
+            </div>
+            <div class="complete">
+              <img src="./images/complete.png" alt="" />
+              <p>Complete</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="Product-card">
+          <div class="product-detail">
+            <div>
+              <img src="./images/product.png" alt="" />
+            </div>
+            <div class="product-title">
+              <h2 class="product__name">মিল্ক বিস্কুট</h2>
+              <div class="group-1">
+                <div class="count">
+                  <p>04</p>
+                  <span>B</span>
+                  <p>14</p>
+                  <span>P</span>
+                  <h3>Out</h3>
+                  <p>04</p>
+                  <span>B</span>
+                  <p>14</p>
+                  <span>P</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="edit-wrapper">
+            <div class="edit">
+              <img src="./images/edit.png" alt="" />
+              <p>Edit</p>
+            </div>
+            <div class="complete">
+              <img src="./images/complete.png" alt="" />
+              <p>Complete</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-popup-container">
+      <div class="product-details">
+        <p class="product__name">মিল্ক বিস্কুট <span>(50g)</span></p>
+        <div class="product-selection">
+          <div>
+            <input name="piece" type="radio" /> <span>বক্স</span>
+            <input name="piece" type="radio" />
+            <span>পিচ</span>
+          </div>
+          <div class="count">
+            <p>04</p>
+            <span>B</span>
+            <p>14</p>
+            <span>P</span>
+          </div>
+        </div>
+        <div class="product-quantity">
+          <img src="images/minus-icon.png" alt="" />
+          <input type="text" value="5" />
+          <img src="images/plus-icon.png" alt="" />
+        </div>
+
+        <button class="confirm__btn">Out Now</button>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

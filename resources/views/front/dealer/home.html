@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <title>Home</title>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
+        <link rel="stylesheet" href="css/home.css" />
+        <link rel="stylesheet" href="main.css" />
+    </head>
+
+    <body>
+        <div class="mobile_container">
+            <div class="container">
+                <div class="navbar">
+                    <a href="login.html" class="login__navbar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                            <circle cx="20.5" cy="20.5" r="20.5" fill="#F8F8FB" />
+                            <path d="M23 15L17 21L23 27" stroke="#8A94A6" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="login.html" class="logout__button">Logout <img src="images/icon/logout.svg" alt="" /></a>
+                </div>
+                <div class="profile__data">
+                    <div>
+                        <h2 class="profile__name">Muhammad Rasel</h2>
+                        <p class="profile__title">Sales officer</p>
+                    </div>
+                    <div class="profile__data-image">
+                        <img src="images/user2.png" alt="" />
+                    </div>
+                </div>
+                <div class="option__wrapper">
+                    <a href="dashboard.html">
+                        <div class="option__card">
+                            <img src="./images/Scan.svg" alt="" />
+                            <h2 class="option__title">Dashboard</h2>
+                            <p class="option__title-so">More information</p>
+                        </div>
+                    </a>
+                    <a href="Product.html">
+                        <div class="option__card">
+                            <img src="./images/Dashboard.svg" alt="" />
+                            <h2 class="option__title">Product</h2>
+                            <p class="option__title-so">All Product</p>
+                        </div>
+                    </a>
+                    <a href="so.html">
+                        <div class="option__card">
+                            <img src="./images/Reatailer.svg" alt="" />
+                            <h2 class="option__title">SO</h2>
+                            <p class="option__title-so">All SO</p>
+                        </div>
+                    </a>
+                    <a href="Inventory.html">
+                        <div class="option__card">
+                            <img src="./images/Summary.svg" alt="" />
+                            <h2 class="option__title">Inventory</h2>
+                            <p class="option__title-so">Your Sell Info</p>
+                        </div>
+                    </a>
+                    <a href="Profit.html">
+                        <div class="option__card">
+                            <img src="./images/Inventory.svg" alt="" />
+                            <h2 class="option__title">Profit</h2>
+                            <p class="option__title-so">Your Profit</p>
+                        </div>
+                    </a>
+                    <a href="Baki-Request.html">
+                        <div class="option__card">
+                            <img src="./images/Route.svg" alt="" />
+                            <h2 class="option__title">Baki Request</h2>
+                            <p class="option__title-so">Your Request</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        <!-- mobile nav -->
+        <div class="nav-container">
+            <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                <a class="navigation__link active" href="home.html">
+                    <i class="navigation__icon" data-feather="home"></i>
+                    <span class="navigation__text">HOME</span>
+                </a>
+                </li>
+                <li class="navigation__item">
+                <a href="so.html" class="navigation__link ">
+                    <i class="navigation__icon" data-feather="user"></i>
+                    <span class="navigation__text">SO</span>
+                </a>
+                </li>
+                <li class="navigation__item">
+                <a class="navigation__link" href="Profit.html">
+                    <i class="navigation__icon" data-feather="dollar-sign"></i>
+                    <span class="navigation__text">Profit</span>
+                </a>
+                </li>
+                <li class="navigation__item">
+                <a class="navigation__link" href="Inventory.html">
+                    <i class="navigation__icon" data-feather="clipboard"></i>
+                    <span class="navigation__text">Inventory</span>
+                </a>
+                </li>
+            </ul>
+            </nav>
+        </div>
+        </div>
+
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

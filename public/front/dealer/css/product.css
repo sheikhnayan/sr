@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: '"Baloo Da 2"', sans-serif;
+    font-family: '"Plus Jakarta Sans"', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding: 37px 25px 35px 27px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+
+.login__button {
+  display: flex;
+  width: 100%;
+  padding: 19px 18px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #258aff 0%, #0063ff 100%);
+  color: #fff;
+  font-family: Baloo Da 2;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 24px;
+  border: none;
+  margin-top: 42px;
+  cursor: pointer;
+}
+
+.logout__button {
+  border-radius: 50px;
+  background: #f8f8fb;
+  color: var(--gray, #8a94a6);
+  font-family: Plus Jakarta Sans;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.total__product-so {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 122, 255, 0.17);
+    background: rgba(0, 122, 255, 0.02);
+    padding: 28px 20px 30px 23px;
+    margin-top: 35px;
+}
+
+.total__product-so-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.total__product-so-right {
+    color: #007AFF;
+    text-align: right;
+    font-family: "Plus Jakarta Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.total__product-title {
+    color: var(--black-2, #595F84);
+    font-family: "Plus Jakarta Sans";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+    /* 20.8px */
+}
+
+.total__product-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+
+.total__product-filter-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+}
+.total__product-filter-icon img{
+    width: 100%;
+    height: 100%;
+}
+.total__product-filter-data {
+    width: 100%;
+}
+
+.total__product-filter-data select {
+    width: 100%;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 8.65px;
+    background: #F8F8FB;
+    color: var(--black-2, #595F84);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Baloo Da 2";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.5px;
+    border: none;
+    cursor: pointer;
+    padding-left: 15px;
+}
+
+.total__product-filter-data p {
+    color: var(--black-2, #595F84);
+    font-family: "Plus Jakarta Sans";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.39px;
+    padding: 12px 0 12px 15px;
+}
+
+.product__wrapper {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 100px;
+    
+}
+@media (min-width: 450px) {
+    .product__wrapper {
+    max-height: 425px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-bottom: 35px;
+    }
+}
+.product__wrapper .product-details-popup{
+    width: 100%;
+}
+.product__card {
+    text-align: center;
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 8.65px;
+    border: 0.865px solid rgba(46, 49, 133, 0.08);
+    background: #FFF;
+    padding: 19px 0 10px 0;
+}
+.product__card:hover{
+    box-shadow: 0px 10px 20px 0px rgba(0, 46, 97, 0.03);
+}
+.product__card img{
+    width: 60px;
+    height: 60px;
+    object-fit: contain; 
+}
+.h_icon{
+    width: 35px;
+    height: 35px;
+}
+.h_icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.product__name {
+    color: var(--black, #222950);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Baloo Da 2";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    margin-top: 13px;
+}
+
+.product__weight {
+    color: var(--gray, #8A94A6);
+    text-align: center;
+    font-family: "Baloo Da 2";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-top: 6px;
+}
+
+.product-details-popup{
+    cursor: pointer;
+}
+
+
+
+
+
+
+.footer__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 39px 21px 40px;
+    border-radius: 20px 20px 0px 0px;
+    background: #FFF;
+    box-shadow: 0px -5px 50px 0px rgba(0, 45, 94, 0.12);
+}
+
+
+
+/* Product Details Popup */
+
+.product__details-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 70px 28px;
+    align-items: center;
+    z-index: 99;
+    height: 100vh;
+    justify-content: center;
+    background-color: #ffffffe8;
+    backdrop-filter: blur(5px);
+    display: none;
+}
+
+.show{
+    left: 0;
+    display: flex;
+    animation: popup .3s ease;
+}
+@keyframes popup {
+    0%{transform: scale(0); opacity: 0;}
+    100%{transform: scale(1); opacity: 1;}
+}
+
+.popup__container {
+    position: relative;
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: 4px solid #FFF;
+    background: #F2F3F9;
+    box-shadow: 0px 10px 30px 0px rgba(0, 39, 81, 0.08);
+}
+
+.popup__cancel {
+    text-align: right;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: -65px;
+    right: 0;
+}
+
+.product__picture {
+    text-align: center;
+    padding: 35px 20px;
+    width: 230px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.product__picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.product__data {
+    margin-bottom: 25px;
+}
+
+.product__title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.product__name {
+    color: var(--black, #222950);
+    font-family: "Baloo Da 2";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.product__weight {
+    color: var(--gray, #8A94A6);
+    font-family: "Baloo Da 2";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+#amount-minus,
+#amount-plus{
+    cursor: pointer;
+}
+.product__rate {
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid #EBEDF5;
+    padding: 7px 9px 5px 10px;
+    margin: auto;
+}
+
+.product__buyrate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product__buyrate h2 {
+    color: var(--black-2, #595F84);
+    font-family: "Baloo Da 2";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.product__buyrate p {
+    color: var(--black, #222950);
+    text-align: right;
+    font-family: "Baloo Da 2";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.product__sellrate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.product__sellrate h2 {
+    color: var(--black-2, #595F84);
+    font-family: "Baloo Da 2";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.product__sellrate p {
+    color: var(--black, #222950);
+    text-align: right;
+    font-family: "Baloo Da 2";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.product__counter-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+    margin-bottom: 19px;
+}
+
+.product__handler-amount {
+    width: 100%;
+    margin: 0px 18px;
+    border-radius: 8px;
+    border: 1px solid #EBEDF5;
+    background: #FEFEFB;
+    padding: 7px 0;
+    color: #595F84;
+    font-family: "Baloo Da 2";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    /* height: 39px;  */
+
+}
+
+.product__confirm-btn {
+    color: #FFF;
+    font-family: "Baloo Da 2";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    /* 157.143% */
+    display: flex;
+    width: 100%;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-radius: 10px;
+    background: var(--g, linear-gradient(180deg, #258AFF 0%, #0063FF 100%));
+    border: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+}
+.product__confirm-btn:hover{
+    border: 1px solid #258AFF;
+    background: transparent;
+    color: #0063FF;
+}
+
+.popup__body {
+    border-radius: 16px;
+    background: #FEFEFB;
+    padding: 26px 19px 20px 22px;
+}
+
+/* Mobile Navigation */
+/* navigation */
+
+.nav-container {
+    padding: 10px 24px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px 20px 0px 0px;
+    background: #fff;
+    box-shadow: 0px -5px 50px 0px rgba(0, 45, 94, 0.12);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .navigation {
+    width: 100%;
+  }
+  .navigation__list {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+  .navigation__item {
+    perspective: 100px;
+  }
+  .navigation__link {
+    font-size: 12px;
+    text-decoration: none;
+    color: #8a94a6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    padding: 5px 30px;
+    overflow: hidden;
+    position: relative;
+    outline: none;
+  }
+  .navigation__link::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 15px;
+    background-color: #007bff83;
+    position: absolute;
+    transform: translateY(60px) scale(0.4);
+    transition: all 0.35s cubic-bezier(0, 0.51, 0, 0.99);
+    opacity: 0;
+  }
+  .navigation__icon {
+    transition: all 0.35s ease;
+    will-change: opacity, transform, background-color;
+  }
+  .navigation__text {
+    position: absolute;
+    transform: translateY(60px) skewY(-20deg);
+    transform-origin: left bottom;
+    color: #007aff;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 0.35s ease;
+    will-change: opacity, transform, background-color;
+    text-transform: uppercase;
+  }
+  .navigation__link.active .navigation__icon {
+    transform: translateY(-60px) rotateX(90deg) scale(0.4) skewY(-30deg);
+    opacity: 0;
+  }
+  .navigation__link.active .navigation__text {
+    opacity: 1;
+    transform: translateY(-3px) skewY(0deg);
+  }
+  .navigation__link.active::before {
+    transform: translateY(12px) scale(1);
+    transition: all 0.35s cubic-bezier(0, 0.51, 0, 0.99) 0.2s;
+    opacity: 1;
+  }
+  @keyframes dotAnime {
+    0% {
+      transform: translateY(60px) scale(0.4);
+      opacity: 0;
+    }
+    75% {
+      transform: translateY(-3px) scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(12px);
+      opacity: 1;
+    }
+  }
+  @keyframes textAnime {
+    from {
+      transform-origin: right center;
+      transform: skewY(0) translateY(0);
+    }
+    25% {
+      transform: skewY(0) translateY(0);
+    }
+    60% {
+      transform: skewY(-12deg) translateY(-22px);
+    }
+    to {
+      transform: skewY(0) translateY(-3px);
+    }
+  }
+  

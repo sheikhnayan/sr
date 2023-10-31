@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.congratulation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.congratulation {
+  width: 669px;
+  height: 679px;
+  border-radius: 12px;
+  background: #FFF;
+  padding: 30px;
+
+  /* shadow-sm */
+  box-shadow: 0px 10px 20px 0px rgba(5, 46, 128, 0.03);
+}
+
+.congratulation__title {
+  color: #2568EF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 133.714%;
+  /* 24.069px */
+  letter-spacing: 0.54px;
+  margin: 28px 0 18px 0;
+}
+
+.congratulation__title__sm {
+  color: var(--gray, #8A94A6);
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 133.714%;
+  /* 18.72px */
+  letter-spacing: 0.42px;
+  margin-bottom: 80px;
+}
+
+.congratulation__addbtn {
+  display: inline-flex;
+  padding: 10px 28px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 7px;
+  background: var(--blue, #007AFF);
+  color: #FFF;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 16.8px */
+  letter-spacing: 0.2px;
+  border: none;
+}
+
+.congratulation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.congratulation__card {
+  text-align: center;
+}
+
+.congratulation__close {
+  position: absolute;
+  right: 28px;
+  top: 30px;
+}
