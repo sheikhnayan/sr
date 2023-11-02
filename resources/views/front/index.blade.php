@@ -8,10 +8,10 @@
   <title>happy</title>
 
   <!-- favicon -->
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ asset('front/images/favicon.ico') }}" type="image/x-icon">
   <!-- google font "Plus Jakarta Sans" cdn for english-->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- google font "Plus Jakarta Sans" cdn for English-->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -25,7 +25,7 @@
 
   <!-- animate aos cdn -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  
+
   <!-- Dark mode script on head -->
   <script>
 
@@ -37,15 +37,15 @@
     }
   </script>
 
-  <style type="text/css">
-    
+<style type="text/css">
+
   *{
     font-family: 'Plus Jakarta Sans', sans-serif;
     line-height: initial;
     }
     .bn{
       font-family: 'Baloo Da 2', cursive;
-      
+
     }
     .nav-item.opennav{
       right: 1rem;
@@ -66,7 +66,7 @@
         visibility: visible;
         top: 65px;
         opacity: 1;
-      } 
+      }
       @media screen and (max-width: 1024px){
         .sub-menu-item{
           display: none;
@@ -92,47 +92,47 @@
         color: #377dff;
         background: #377dff1a;
       }
-      
+
   .faq-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-}
-/* .faqHeading.active {
-  background: blue;
-} */
+    }
+    /* .faqHeading.active {
+    background: blue;
+    } */
 
-.faqContent {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-.happy {
-    background: linear-gradient( to right,#0472ed 20%,#8973f4 30%,#ff565e 70%,#f6bd4b 80%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-    background-size: 500% auto;
-    animation: animation 5s ease-in-out infinite alternate;
-}
-@keyframes animation {
-    0% {
-        background-position: 0% 50%;
+    .faqContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
     }
-    100% {
-        background-position: 100% 50%;
+    .happy {
+        background: linear-gradient( to right,#0472ed 20%,#8973f4 30%,#ff565e 70%,#f6bd4b 80%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        background-size: 500% auto;
+        animation: animation 5s ease-in-out infinite alternate;
+        }
+    @keyframes animation {
+        0% {
+            background-position: 0% 50%;
+        }
+        100% {
+            background-position: 100% 50%;
+        }
     }
-}
-.popup.openPopup{
-  display: flex;
-  animation: popup .3s ease;
-}
-@keyframes popup {
-  0%{ opacity: 0;}
-  100%{ opacity: 1;}
-}
- </style>
+    .popup.openPopup{
+    display: flex;
+    animation: popup .3s ease;
+    }
+    @keyframes popup {
+    0%{ opacity: 0;}
+    100%{ opacity: 1;}
+    }
+</style>
 
 </head>
 
@@ -145,21 +145,21 @@
     <nav class="my-container flex h-full items-center justify-between">
       <!-- logo -->
       <div class="lg:w-[25%]">
-        <img class="dark:hidden" src="images/logo-black.svg" alt="" />
-        <img class="hidden dark:block" src="images/logo-white.svg" alt="" />
+        <img class="dark:hidden" src="{{ asset('front/images/logo-black.svg') }}" alt="" />
+        <img class="hidden dark:block" src="{{ asset('front/images/logo-white.svg') }}" alt="" />
       </div>
       <!-- menu -->
       <div class="nav-item flex flex-col p-8 bg-white dark:bg-[#212B44] shadow-lg lg:shadow-none z-10 rounded-lg w-[280px] fixed top-4 lg:top-0 right-[-500px] lg:right-0 lg:relative lg:flex-row lg:justify-between lg:p-0 lg:items-center lg:bg-transparent lg:w-[80%] xl:w-[75%]">
         <div class="">
           <ul class="flex gap-4 lg:gap-6 flex-col lg:flex-row">
-            
-            <li class="flex justify-between"><a href="#" class="menu-item border-b !text-blue-400 border-b-blue-400 !font-[600] bn">ডিলার</a><img onclick="removenav()" src="images/icon/close.svg" alt="close icon" class="w-9 lg:hidden"></li>
+
+            <li class="flex justify-between"><a href="#" class="menu-item border-b !text-blue-400 border-b-blue-400 !font-[600] bn">ডিলার</a><img onclick="removenav()" src="{{ asset('front/images/icon/close.svg') }}" alt="close icon" class="w-9 lg:hidden"></li>
             <li><a href="#" class="menu-item bn">দোকানদার</a></li>
             <li><a href="#" class="menu-item bn">বিক্রয় প্রতিনিধি</a></li>
             <li><a href="#" class="menu-item bn">সরবরাহকারী</a></li>
             <li><a href="#" class="menu-item bn">আমাদের সম্পর্কে</a></li>
             <li class="relative sub-menu"><a href="#" class="menu-item bn flex items-center gap-1.5" onclick="submenu()">আরো<ion-icon name="chevron-down-outline"></ion-icon></a>
-            
+
             <ul class="sub-menu-item lg:absolute lg:top-[70px] tran lg:bg-white dark:bg-[#2c3957] lg:p-4 lg:w-[160px] lg:left-0 flex flex-col gap-2 rounded-lg lg:shadow-lg lg:invisible lg:opacity-0">
               <li><a href="#" class="menu-item bn font-normal text-sm">বিক্রয় প্রতিনিধি</a></li>
               <li><a href="#" class="menu-item bn font-normal text-sm">সরবরাহকারী</a></li>
@@ -171,7 +171,7 @@
         </div>
         <!-- right -->
         <div class="flex justify-between items-center gap-5 mt-6 lg:mt-0 md:mt-0">
-          
+
             <!-- dark mood button -->
 
             <div class="bg-[#F6F8FC] text-[#8A94A6] dark:bg-[#191F34] border border-[#EFF1F6] dark:border-[#363F5E] w-10 h-10 flex justify-center items-center rounded-full hover:bg-slate-200 tran">
@@ -179,17 +179,21 @@
                 <ion-icon name="moon-outline" class="happy-dark text-xl cursor-pointer w-full h-full p-2 text-slate-500 dark:text-slate-400"></ion-icon>
             </div>
             <!-- dark mood button END -->
+          @if (Auth::check())
+          <a href="/sr" class="primary-btn bn">ড্যাশবোর্ড</a>
 
-          <a href="#" class="primary-btn bn">যোগাযোগ</a>
+          @else
+          <a href="/log" class="primary-btn bn">যোগাযোগ</a>
+          @endif
         </div>
       </div>
       <!-- responsive -->
       <div class="lg:hidden" onclick="opennav()">
-        <img src="images/icon/menu.svg" class="w-9" alt="" />
+        <img src="{{ asset('front/images/icon/menu.svg') }}" class="w-9" alt="" />
       </div>
     </nav>
   </header>
-  
+
   <!-- =========== header END =========== -->
 
 
@@ -202,19 +206,23 @@
         <h1 class="mb-5 text-[30px] sm:text-[40px] md:text-[35px] lg:text-[50px] font-[700] text-[#222950] dark:text-white" data-aos="fade-right" data-aos-delay="50">Grow your business <br> with <span class="text-[#0472ED] happy">Happy</span></h1>
         <p class="text-sm lg:text-base text-[#595F84] dark:text-[#888DAD] mb-10 max-w-lg" data-aos="fade-right" data-aos-delay="100">Happy envisions revolutionizing B2B logistics with cutting-edge technology, empowering businesses to grow effortlessly and achieve their fullest potential in the retail industry.</p>
         <a href="#" class="flex justify-center md:justify-start" onclick="getstart()">
-          <button class="primary-btn bn flex items-center gap-3 !pr-2.5">এখুনি শুরু করুন <ion-icon class="text-[30px]" name="arrow-forward-circle"></ion-icon></button>
+        @if (Auth::check())
+          <a href="/sr" class="primary-btn bn flex items-center gap-3 !pr-2.5" style="width: 180px;">ড্যাশবোর্ড <ion-icon class="text-[30px]" name="arrow-forward-circle"></ion-icon></a>
+          @else
+          <a href="/log" class="primary-btn bn flex items-center gap-3 !pr-2.5" style="width: 180px;">এখুনি শুরু করুন <ion-icon class="text-[30px]" name="arrow-forward-circle"></ion-icon></a>
+        @endif
         </a>
       </div>
       <div class="mt-10 md:w-[40%] p-6 sm:p-10 md:p-0">
-        <img class="w-full" src="images/hero-img.svg" alt=""data-aos="fade-left">
+        <img class="w-full" src="{{ asset('front/images/hero-img.svg') }}" alt=""data-aos="fade-left">
       </div>
     </div>
 
     <!-- get started popup -->
     <div class="getstart popup_bg popup">
-      
+
       <div class="relative mt-20 rounded-xl bg-white p-10 min-w-[315px] sm:min-w-[580px]">
-        
+
         <ion-icon onclick="closeP()" class="absolute -top-16 right-0 h-6 w-6 text-blue-600 p-2 bg-white overflow-hidden rounded-full cursor-pointer" name="close-outline"></ion-icon>
 
         <h1 class="mb-10 text-center font-semibold bn text-[#222950] text-[18px]">আপনার শিল্প নির্বাচন করুন</h1>
@@ -261,12 +269,12 @@
     <a href="#" class="tran bg-[#EBF5FF] dark:bg-slate-800 text-[#007AFF] px-4 py-1 rounded-full hover:bg-[#007AFF] hover:text-white text-sm font-medium flex justify-between gap-2 items-center">See All Brand <ion-icon name="chevron-forward-outline"></ion-icon></a>
   </div>
   <div class="grid grid-cols-2 gap-5 sm:grid-cols-4 md:grid-cols-6 lg:gap-8"data-aos="fade-up">
-    <img class="brand_logo" src="images/brand/b1.png" alt="logo">
-    <img class="brand_logo" src="images/brand/b2.png" alt="logo">
-    <img class="brand_logo" src="images/brand/b3.png" alt="logo">
-    <img class="brand_logo" src="images/brand/b4.png" alt="logo">
-    <img class="brand_logo" src="images/brand/b5.png" alt="logo">
-    <img class="brand_logo" src="images/brand/b6.png" alt="logo">
+    <img class="brand_logo" src="{{ asset('front/images/brand/b1.png') }}" alt="logo">
+    <img class="brand_logo" src="{{ asset('front/images/brand/b2.png') }}" alt="logo">
+    <img class="brand_logo" src="{{ asset('front/images/brand/b3.png') }}" alt="logo">
+    <img class="brand_logo" src="{{ asset('front/images/brand/b4.png') }}" alt="logo">
+    <img class="brand_logo" src="{{ asset('front/images/brand/b5.png') }}" alt="logo">
+    <img class="brand_logo" src="{{ asset('front/images/brand/b6.png') }}" alt="logo">
   </div>
 </section>
 
@@ -286,43 +294,43 @@
       <h1 class="my-4 text-xl font-semibold text-[#222950] dark:text-white md:text-3xl lg:text-4xl bn">আপনাদের জন্য আমাদের উপলব্ধ পরিষেবাগুলি</h1>
       <p class="text-sm text-[#8A94A6] dark:text-slate-400 max-w-lg md:max-w-xl bn">"আমাদের প্রাথমিক পরিষেবাগুলি সম্পর্কে গভীরভাবে জানার জন্য অনুগ্রহ করে পড়া চালিয়ে যান৷আপনার যদি কোনো জিজ্ঞাসা বা উদ্বেগ থাকে, তাহলে আমাদের সাথে যোগাযোগ করতে দ্বিধা করবেন না ৷"</p>
     </div>
-  
+
     <!-- porisheba box -->
     <div class="mt-7 md:mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:px-12 xl:px-20">
       <div class="s-box tran"data-aos="zoom-in">
-        <img class="mb-6 h-8 w-8 object-contain" src="images/icon/p1.svg" alt="icon" />
+        <img class="mb-6 h-8 w-8 object-contain" src="{{ asset('front/images/icon/p1.svg') }}" alt="icon" />
         <h4 class="s-box-h4 bn">দোকানদার</h4>
         <p class="s-box-p bn">ফাস্ট-মুভিং কনজিউমার গুডস (এফএমসিজি) খুচরা বিক্রেতারা নির্দিষ্ট চ্যালেঞ্জের মুখোমুখি হয় যা ডেটা</p>
         <span class="s-box-link tran bn" onclick="popup1()">আরও জানুন <ion-icon name="chevron-forward-outline"></ion-icon></span>
 
       </div>
       <div class="s-box tran !shadow-xl !shadow-blue-900/5 !border !border-blue-500/30"data-aos="zoom-in">
-        <img class="mb-6 h-8 w-8 object-contain" src="images/icon/p2.svg" alt="icon" />
+        <img class="mb-6 h-8 w-8 object-contain" src="{{ asset('front/images/icon/p2.svg') }}" alt="icon" />
         <h4 class="s-box-h4 bn ">বিক্রয় প্রতিনিধি</h4>
         <p class="s-box-p bn">একজন বিক্রয় প্রতিনিধির ভূমিকা ক্রমশ চ্যালেঞ্জিং এবং জটিল হয়ে উঠছে, বিশেষ করে আজকের</p>
         <span class="s-box-link tran bn" onclick="popup2()">আরও জানুন <ion-icon name="chevron-forward-outline"></ion-icon></span>
 
       </div>
       <div class="s-box tran"data-aos="zoom-in">
-        <img class="mb-6 h-8 w-8 object-contain" src="images/icon/p3.svg" alt="icon" />
+        <img class="mb-6 h-8 w-8 object-contain" src="{{ asset('front/images/icon/p3.svg') }}" alt="icon" />
         <h4 class="s-box-h4 bn ">ডিলার</h4>
         <p class="s-box-p bn">ফাস্ট-মুভিং কনজিউমার গুডস (FMCG) শিল্পে বন্টন সমস্যা সমাধান করতে, আপনি ভোক্তাদের চাহিদার</p>
         <span class="s-box-link tran bn" onclick="popup3()">আরও জানুন <ion-icon name="chevron-forward-outline"></ion-icon></span>
       </div>
       <div class="s-box tran"data-aos="zoom-in">
-        <img class="mb-6 h-8 w-8 object-contain" src="images/icon/p4.svg" alt="icon" />
+        <img class="mb-6 h-8 w-8 object-contain" src="{{ asset('front/images/icon/p4.svg') }}" alt="icon" />
         <h4 class="s-box-h4 bn ">TSM</h4>
         <p class="s-box-p bn">উন্নত সাপ্লাই চেইন ম্যানেজমেন্ট: হ্যাপির লজিস্টিক পরিষেবাগুলি কোম্পানিগুলিকে পরিবহন</p>
         <span class="s-box-link tran bn" onclick="popup4()">আরও জানুন <ion-icon name="chevron-forward-outline"></ion-icon></span>
       </div>
       <div class="s-box tran"data-aos="zoom-in">
-        <img class="mb-6 h-8 w-8 object-contain" src="images/icon/p5.svg" alt="icon" />
+        <img class="mb-6 h-8 w-8 object-contain" src="{{ asset('front/images/icon/p5.svg') }}" alt="icon" />
         <h4 class="s-box-h4 bn ">কোম্পানি</h4>
         <p class="s-box-p bn">Happy's B2B রিটেইল লজিস্টিকস, সেলস রিপ্রেজেন্টেটিভ পারফরম্যান্স</p>
         <span class="s-box-link tran bn" onclick="popup5()">আরও জানুন <ion-icon name="chevron-forward-outline"></ion-icon></span>
       </div>
       <div class="s-box tran"data-aos="zoom-in">
-        <img class="mb-6 h-8 w-8 object-contain" src="images/icon/p6.svg" alt="icon" />
+        <img class="mb-6 h-8 w-8 object-contain" src="{{ asset('front/images/icon/p6.svg') }}" alt="icon" />
         <h4 class="s-box-h4 bn ">ব্যবস্থাপনা</h4>
         <p class="s-box-p bn">আমরা সমস্ত নেতৃস্থানীয় ব্র্যান্ড প্রোডাক্ট নিয়ে কাজ করি. আপনার দোকানের তাকগুলির</p>
         <span class="s-box-link tran bn" onclick="popup6()">আরও জানুন <ion-icon name="chevron-forward-outline"></ion-icon></span>
@@ -334,7 +342,7 @@
       <div class="popup_box">
         <div class="popup_header">
           <div class="flex items-center">
-            <img class="w-5 mr-2" src="images/icon/p1.svg" alt="">
+            <img class="w-5 mr-2" src="{{ asset('front/images/icon/p1.svg') }}" alt="">
             <h1 class="popup_h1 bn">দোকানদার</h1>
           </div>
           <ion-icon class="popup_icon" name="close-outline" onclick="closeP()"></ion-icon>
@@ -354,7 +362,7 @@
       <div class="popup_box">
         <div class="popup_header">
           <div class="flex items-center">
-            <img class="w-5 mr-2" src="images/icon/p2.svg" alt="">
+            <img class="w-5 mr-2" src="{{ asset('front/images/icon/p2.svg') }}" alt="">
             <h1 class="popup_h1 bn">বিক্রয় প্রতিনিধি</h1>
           </div>
           <ion-icon class="popup_icon" name="close-outline" onclick="closeP()"></ion-icon>
@@ -373,7 +381,7 @@
       <div class="popup_box">
         <div class="popup_header">
           <div class="flex items-center">
-            <img class="w-5 mr-2" src="images/icon/p3.svg" alt="">
+            <img class="w-5 mr-2" src="{{ asset('front/images/icon/p3.svg') }}" alt="">
             <h1 class="popup_h1 bn">ডিলার</h1>
           </div>
           <ion-icon class="popup_icon" name="close-outline" onclick="closeP()"></ion-icon>
@@ -391,7 +399,7 @@
       <div class="popup_box">
         <div class="popup_header">
           <div class="flex items-center">
-            <img class="w-5 mr-2" src="images/icon/p4.svg" alt="">
+            <img class="w-5 mr-2" src="{{ asset('front/images/icon/p4.svg') }}" alt="">
             <h1 class="popup_h1 bn">TSM</h1>
           </div>
           <ion-icon class="popup_icon" name="close-outline" onclick="closeP()"></ion-icon>
@@ -406,7 +414,7 @@
       <div class="popup_box">
         <div class="popup_header">
           <div class="flex items-center">
-            <img class="w-5 mr-2" src="images/icon/p5.svg" alt="">
+            <img class="w-5 mr-2" src="{{ asset('front/images/icon/p5.svg') }}" alt="">
             <h1 class="popup_h1 bn">কোম্পানি</h1>
           </div>
           <ion-icon class="popup_icon" name="close-outline" onclick="closeP()"></ion-icon>
@@ -421,7 +429,7 @@
       <div class="popup_box">
         <div class="popup_header">
           <div class="flex items-center">
-            <img class="w-5 mr-2" src="images/icon/p6.svg" alt="">
+            <img class="w-5 mr-2" src="{{ asset('front/images/icon/p6.svg') }}" alt="">
             <h1 class="popup_h1 bn">ব্যবস্থাপনা</h1>
           </div>
           <ion-icon class="popup_icon" name="close-outline" onclick="closeP()"></ion-icon>
@@ -431,28 +439,32 @@
         </div>
       </div>
     </div>
-    
+
     <div class="bg-[#F6F8FC] dark:bg-[#191F34] flex py-10 px-7 md:py-12 md:px-12 flex-col items-start rounded-xl md:rounded-2xl mt-12 md:mt-32 md:flex-row md:gap-4 md:items-center md:justify-between" data-aos="fade-up">
       <div class="mb-5 md:mb-0">
         <h1 class="text-xl mb-2 font-bold text-[#222950] dark:text-white lg:text-3xl bn">আপনার ব্যবসা উন্নত করতে <span class="text-[#0472ED] bn">যোগাযোগ করুন</span></h1>
         <p class="text-sm text-[#595F84] dark:text-slate-400 sm:max-w-sm md:text-base bn lg:font-medium">এটি কীভাবে কাজ করে এবং এটি কী করে সে সম্পর্কে প্রশ্নগুলি প্রায়শই জিজ্ঞাসা করা হয়।</p>
       </div>
       <a href="#">
-        <button class="primary-btn bn flex items-center gap-3 !pr-2.5">এখুনি শুরু করুন <ion-icon class="text-[30px]" name="arrow-forward-circle"></ion-icon></button>
+        @if (Auth::check())
+          <a href="/sr" class="primary-btn bn flex items-center gap-3 !pr-2.5" style="width: 180px;">ড্যাশবোর্ড <ion-icon class="text-[30px]" name="arrow-forward-circle"></ion-icon></a>
+          @else
+          <a href="/log" class="primary-btn bn flex items-center gap-3 !pr-2.5" style="width: 180px;">এখুনি শুরু করুন <ion-icon class="text-[30px]" name="arrow-forward-circle"></ion-icon></a>
+        @endif
       </a>
     </div>
   </section>
-  
+
 
   <!-- =========== Services END =========== -->
-  
-  
+
+
   <!-- =========== About =========== -->
 
 <section class="my-container pb-16 md:py-28">
   <div class="flex flex-col md:flex-row md:gap-10 lg:gap-20">
     <div class="mb-7 md:mb-0 md:w-2/5 md:max-h-[380px]" data-aos="zoom-in">
-      <img class="sm:mb-0 p-10 md:p-0 w-full h-full object-contain" src="images/what.png" alt="">
+      <img class="sm:mb-0 p-10 md:p-0 w-full h-full object-contain" src="{{ asset('front/images/what.png') }}" alt="">
     </div>
     <div class="flex flex-col gap-6 md:w-3/5" data-aos="fade-up">
       <span class="text-[#007AFF] flex items-center gap-3 font-semibold bn">পরিচিতি <div class="h-[2px] w-3 rounded-full bg-slate-300 dark:bg-slate-700"></div></span>
@@ -460,7 +472,7 @@
       <p class="text-slate-600 dark:text-[#ABB0CE] font-semibold text-sm pl-4 border-l-4 border-[#0472ED] sm:max-w-lg lg:text-base bn">এটি কীভাবে কাজ করে এবং এটি কী করে সে সম্পর্কে প্রশ্নগুলি প্রায়শই জিজ্ঞাসা করা হয়।</p>
       <p class="text-slate-500 dark:text-[#888DAD] text-sm bn lg:text-base">Happy হল একটি পেশাদার B2B রিটেল লজিস্টিক প্ল্যাটফর্ম যা ব্যবসার বৃদ্ধিতে সাহায্য করার জন্য অত্যাধুনিক প্রযুক্তি ব্যবহার করে। আমরা আমাদের ক্লায়েন্টদের একটি নির্বিঘ্ন এবং দক্ষ অভিজ্ঞতা প্রদান করতে প্রতিশ্রুতিবদ্ধ যা নির্ভরযোগ্যতা, আধুনিকতা এবং সামর্থ্যের সমন্বয় করে। আমাদের প্ল্যাটফর্মের প্রতিটি দিক আমাদের ক্লায়েন্টদের চাহিদা মেটাতে ডিজাইন করা হয়েছে, এবং আমরা তাদের সাফল্যের যাত্রায় তাদের সাথে অংশীদার হতে পেরে সম্মানিত। <br> <br> আমরা বিশ্বাস করি যে দক্ষতা এবং অত্যাধুনিক প্রযুক্তির মিশ্রণের মাধ্যমে আমরা আমাদের ক্লায়েন্টদের তাদের স্বপ্নকে বাস্তবায়িত করতে সাহায্য করতে পারি। আমরা আমাদের ক্লায়েন্টদের সর্বোত্তম পরিষেবা প্রদান করছি তা নিশ্চিত করতে আমরা ক্রমাগত উদ্ভাবন এবং আমাদের প্ল্যাটফর্মের উন্নতি করছি। আমরা আত্মবিশ্বাসী যে হ্যাপি হল B2B রিটেল লজিস্টিক প্ল্যাটফর্ম যা আপনার ব্যবসার বৃদ্ধি এবং সফল হতে সাহায্য করতে পারে।</p>
     </div>
-  </div>  
+  </div>
 </section>
 
   <!-- =========== About END =========== -->
@@ -479,7 +491,7 @@
         </div>
         <h1 class="my-4 text-2xl font-semibold text-[#222950] dark:text-white md:text-3xl lg:text-4xl bn">প্রায়শই জিজ্ঞাসিত প্রশ্ন এবং উত্তর</h1>
       </div>
-    
+
       <div class="flex flex-col gap-6 max-w-4xl mx-auto">
         <!-- single -->
         <div class="tran faq-box " data-aos="zoom-in">
@@ -487,7 +499,7 @@
             <button class="faq-ht bn">আমি একজন খুচরা বিক্রেতা আমার কি কোনো পরিবহন খরচ দিতে হবে পণ্য নেওয়ার জন্য?</button>
             <ion-icon class="faq-icon" name="chevron-down-outline"></ion-icon>
           </div>
-  
+
           <div class="faqContent bg-white bn dark:bg-[#212945]">
             <p class="faq-p bn">আপনাকে নির্ভরযোগ্যতা, আধুনিকতা এবং সাশ্রয়ী মূল্যের সমন্বয়ে একটি নিরবচ্ছিন্ন এবং দক্ষ অভিজ্ঞতা প্রদান করতে নিবেদিত৷ আমাদের প্ল্যাটফর্মের প্রতিটি ক্ষেত্রে স্পষ্ট, এবং আপনার সাফল্যের যাত্রায় আপনার সাথে অংশীদার হতে পেরে আমরা সম্মানিত ৷</p>
           </div>
@@ -498,7 +510,7 @@
             <button class="faq-ht bn">আমি একজন খুচরা বিক্রেতা আমার কি কোনো পরিবহন খরচ দিতে হবে পণ্য নেওয়ার জন্য?</button>
             <ion-icon class="faq-icon" name="chevron-down-outline"></ion-icon>
           </div>
-  
+
           <div class="faqContent bg-white bn dark:bg-[#212945]">
             <p class="faq-p bn">আপনাকে নির্ভরযোগ্যতা, আধুনিকতা এবং সাশ্রয়ী মূল্যের সমন্বয়ে একটি নিরবচ্ছিন্ন এবং দক্ষ অভিজ্ঞতা প্রদান করতে নিবেদিত৷ আমাদের প্ল্যাটফর্মের প্রতিটি ক্ষেত্রে স্পষ্ট, এবং আপনার সাফল্যের যাত্রায় আপনার সাথে অংশীদার হতে পেরে আমরা সম্মানিত ৷</p>
           </div>
@@ -509,7 +521,7 @@
             <button class="faq-ht bn">আমি একজন খুচরা বিক্রেতা আমার কি কোনো পরিবহন খরচ দিতে হবে পণ্য নেওয়ার জন্য?</button>
             <ion-icon class="faq-icon" name="chevron-down-outline"></ion-icon>
           </div>
-  
+
           <div class="faqContent bg-white bn dark:bg-[#212945]">
             <p class="faq-p bn">আপনাকে নির্ভরযোগ্যতা, আধুনিকতা এবং সাশ্রয়ী মূল্যের সমন্বয়ে একটি নিরবচ্ছিন্ন এবং দক্ষ অভিজ্ঞতা প্রদান করতে নিবেদিত৷ আমাদের প্ল্যাটফর্মের প্রতিটি ক্ষেত্রে স্পষ্ট, এবং আপনার সাফল্যের যাত্রায় আপনার সাথে অংশীদার হতে পেরে আমরা সম্মানিত ৷</p>
           </div>
@@ -520,14 +532,14 @@
             <button class="faq-ht bn">আমি একজন খুচরা বিক্রেতা আমার কি কোনো পরিবহন খরচ দিতে হবে পণ্য নেওয়ার জন্য?</button>
             <ion-icon class="faq-icon" name="chevron-down-outline"></ion-icon>
           </div>
-  
+
           <div class="faqContent bg-white bn dark:bg-[#212945]">
             <p class="faq-p bn">আপনাকে নির্ভরযোগ্যতা, আধুনিকতা এবং সাশ্রয়ী মূল্যের সমন্বয়ে একটি নিরবচ্ছিন্ন এবং দক্ষ অভিজ্ঞতা প্রদান করতে নিবেদিত৷ আমাদের প্ল্যাটফর্মের প্রতিটি ক্ষেত্রে স্পষ্ট, এবং আপনার সাফল্যের যাত্রায় আপনার সাথে অংশীদার হতে পেরে আমরা সম্মানিত ৷</p>
           </div>
         </div>
-        
+
       </div>
-  
+
     </div>
 </section>
   <!-- =========== FAQ END =========== -->
@@ -535,7 +547,7 @@
 
 
   <!-- =========== Contact =========== -->
-  
+
 <section class="py-16 md:py-28">
     <div class="my-container max-w-7xl mx-auto px-4 sm:px-6">
       <!-- counter -->
@@ -558,7 +570,7 @@
         </div>
       </div>
       <!-- END counter -->
-      
+
       <!-- contact form -->
 
       <div class="py-16 md:py-28 lg:px-12 xl:px-20">
@@ -567,9 +579,9 @@
             <span class="bn flex items-center gap-3 font-semibold text-[#007AFF]"><div class="h-[2px] w-3 rounded-full bg-slate-300 dark:bg-slate-700"></div>যোগাযোগ</span>
             <h1 class="bn text-2xl font-semibold text-[#222950] dark:text-white md:text-3xl lg:text-4xl">সরাসরি আমাদের সাথে যোগাযোগ করুন !</h1>
             <p class="bn mb-10 text-sm text-slate-500 dark:text-slate-400 lg:text-base">পণ্য অনুসন্ধানের জন্য বা একটি ব্যবসার প্রস্তাব জমা দেওয়ার জন্য, দয়া করে আমাদের কাছে পৌঁছানোর জন্য নীচের ফর্মটি ব্যবহার করুন।</p>
-            <img class="w-40" src="images/contact.png" alt="" />
+            <img class="w-40" src="{{ asset('front/images/contact.png') }}" alt="" />
           </div>
-      
+
           <!-- form -->
           <div class="relative" data-aos="fade-up">
             <div class="relative rounded-xl bg-white dark:bg-[#212B44] px-6 py-8 shadow-xl shadow-blue-900/5 hover:shadow-blue-900/10 tran sm:px-12 sm:py-12 md:min-w-[380px] lg:min-w-[480px] h-fit overflow-hidden">
@@ -587,16 +599,16 @@
                   <ion-icon class="absolute left-3 top-[16px] sm:left-4 w-5 text-xl text-[#595F84]" name="chatbox-ellipses-outline"></ion-icon>
                   <textarea name="message" id="message" class="form-input min-h-[150px] bn" placeholder="আপনার মেসেজ লিখুন"></textarea>
                 </div>
-        
+
                 <button type="submit" class="bn font-semibold w-full rounded-lg bg-[#0472ED] py-3 text-white hover:bg-blue-500 active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 transition-all duration-300">জমা দিন</button>
               </form>
             </div>
-            <img class="absolute -z-10 w-52 -left-24 -bottom-11 sm:-left-10" src="images/dot.svg" alt="">
+            <img class="absolute -z-10 w-52 -left-24 -bottom-11 sm:-left-10" src="{{ asset('front/images/dot.svg') }}" alt="">
           </div>
 
         </div>
       </div>
-      
+
       <!-- END contact form -->
 
     </div>
@@ -655,13 +667,13 @@
           </ul>
         </div>
         <div class="md:col-span-2 lg:col-span-2">
-          <img class="h-16 w-24 animate-pulse rounded-xl bg-white dark:bg-[#2B334F] p-3 shadow-xl shadow-blue-900/5 dark:hidden" src="images/logo-black.svg" alt="" />
-          <img class="h-16 w-24 animate-pulse rounded-xl bg-white dark:bg-[#2B334F] p-3 shadow-xl shadow-blue-900/5 hidden dark:block" src="images/logo-white.svg" alt="" />
+          <img class="h-16 w-24 animate-pulse rounded-xl bg-white dark:bg-[#2B334F] p-3 shadow-xl shadow-blue-900/5 dark:hidden" src="{{ asset('front/images/logo-black.svg') }}" alt="" />
+          <img class="h-16 w-24 animate-pulse rounded-xl bg-white dark:bg-[#2B334F] p-3 shadow-xl shadow-blue-900/5 hidden dark:block" src="{{ asset('front/images/logo-white.svg') }}" alt="" />
           <div class="mt-9 flex gap-4">
-            <a href="#"><img class="h-10 w-10 duration-300 hover:scale-90" src="images/icon/facebook.svg" alt="" /></a>
-            <a href="#"><img class="h-10 w-10 duration-300 hover:scale-90" src="images/icon/twitter.svg" alt="" /></a>
-            <a href="#"><img class="h-10 w-10 duration-300 hover:scale-90" src="images/icon/insta.svg" alt="" /></a>
-            <a href="#"><img class="h-10 w-10 duration-300 hover:scale-90" src="images/icon/pinterest.svg" alt="" /></a>
+            <a href="#"><img class="h-10 w-10 duration-300 hover:scale-90" src="{{ asset('front/images/icon/facebook.svg') }}" alt="" /></a>
+            <a href="#"><img class="h-10 w-10 duration-300 hover:scale-90" src="{{ asset('front/images/icon/twitter.svg') }}" alt="" /></a>
+            <a href="#"><img class="h-10 w-10 duration-300 hover:scale-90" src="{{ asset('front/images/icon/insta.svg') }}" alt="" /></a>
+            <a href="#"><img class="h-10 w-10 duration-300 hover:scale-90" src="{{ asset('front/images/icon/pinterest.svg') }}" alt="" /></a>
           </div>
         </div>
       </div>
@@ -679,7 +691,7 @@
   </footer>
   <!-- =========== Footer END =========== -->
 
-  
+
 
 
   <script src="{{ asset('front/script.js') }}"></script>
@@ -696,7 +708,7 @@
   <script>
     var coll = document.getElementsByClassName("faqHeading");
     var i;
-    
+
     for (i = 0; i < coll.length; i++) {
       coll[i].addEventListener("click", function() {
         this.classList.toggle("active");
@@ -705,11 +717,11 @@
           faqContent.style.maxHeight = null;
         } else {
           faqContent.style.maxHeight = faqContent.scrollHeight + "px";
-        } 
+        }
       });
     }
     </script>
-          
+
 </body>
 
 </html>

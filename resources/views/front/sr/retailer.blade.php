@@ -104,8 +104,11 @@
       <ion-icon name="chevron-back-outline" class="tran h-7 w-7 cursor-pointer rounded-full bg-[#F8F8FB] p-2 text-[#8A94A6] hover:ring-1 hover:ring-slate-400"></ion-icon>
     </a>
         <div class="flex items-center gap-3">
-            <a href="#" class="tran flex items-center gap-3 rounded-full bg-[#FAFCFF] px-4 py-2 text-sm text-[#007AFF] border border-[#007AFF2B] font-semibold"><img src="wallet.svg" alt=""> Tk 50.00</a>
-            <a href="#" class="tran flex items-center gap-3 rounded-full bg-[#F8F8FB] px-4 py-2 hover:bg-red-50 hover:text-red-500 hover:ring-1 group hover:ring-red-500 text-sm text-[#8A94A6]">Logout <ion-icon class="text-[#595F84] group-hover:text-red-500 text-lg" name="log-out-outline"></ion-icon></a>
+            <a href="#" class="tran flex items-center gap-3 rounded-full bg-[#FAFCFF] px-4 py-2 text-sm text-[#007AFF] border border-[#007AFF2B] font-semibold"><img src="wallet.svg" alt=""> Tk {{ Auth::user()->wallet }}</a>
+            <form action="{{ route('logout') }}" method="post">
+            @csrf
+            <button href="#" class="tran flex items-center gap-3 rounded-full bg-[#F8F8FB] px-4 py-2 hover:bg-red-50 hover:text-red-500 hover:ring-1 group hover:ring-red-500 text-sm text-[#8A94A6]">Logout <ion-icon class="text-[#595F84] group-hover:text-red-500 text-lg" name="log-out-outline"></ion-icon></button>
+            </form>
         </div>
 
     </div>

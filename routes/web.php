@@ -30,7 +30,7 @@ use App\Http\Controllers\front\SRController as FSRController;
 */
 
 Route::get('/', function () {
-    return redirect('/log');
+    return view('front.index');
 });
 
 Route::prefix('admin')->group(function () {
@@ -113,7 +113,7 @@ Route::name('front.')->middleware('auth')->group(function () {
     Route::get('/get-bazar/{val}', [FrontendController::class,'get_bazar']);
 
 Route::prefix('sr')->middleware('sr')->name('sr.')->group(function () {
-    Route::get('/', [FSRController::class,'index'])->name('index');
+    Route::get('/', [FSRController::class,'retailer'])->name('index');
     Route::get('/summary', [FSRController::class,'summary'])->name('summary');
     Route::get('/retailer', [FSRController::class,'retailer'])->name('retailer');
     Route::get('/check-retailer/{val}', [FSRController::class,'check_retailer'])->name('check-retailer');
