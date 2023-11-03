@@ -116,13 +116,13 @@
 
 
     <form action="" class="flex flex-col gap-4">
-        <select name="union" id="union" class="reatailer-input text-[#222950]">
+        <select name="union" id="union_select" class="reatailer-input text-[#222950]">
           <option value="">Select Union</option>
           @foreach ($union as $item)
               <option value="{{ $item->id }}">{{ $item->name }}</option>
           @endforeach
         </select>
-        <select name="bazar" id="bazar" class="reatailer-input text-[#222950]">
+        <select name="bazar" id="bazar_select" class="reatailer-input text-[#222950]">
           <option value="">Select Bazar</option>
         </select>
 
@@ -243,13 +243,13 @@
       <input id="name" name="phone" type="number" placeholder="Phone Number" class="reatailer-input bn phone" />
       <input id="name" name="name" type="text" autocomplete="name" placeholder="Reatailer Name" class="reatailer-input bn" />
       <input id="name" name="shop_name" type="text" placeholder="Shop Name" class="reatailer-input bn" />
-      <select name="union_id" id="union_new" name="union_id" class="reatailer-input text-[#222950]">
+      <select name="union_id" id="union" name="union_id" class="reatailer-input text-[#222950]">
         <option disabled selected value="">Select Union</option>
         @foreach ($union as $item)
         <option value="{{ $item->id }}">{{ $item->name }}</option>
         @endforeach
       </select>
-      <select name="bazar_id" id="bazar_new" class="reatailer-input text-[#222950]" required>
+      <select name="bazar_id" id="bazar" class="reatailer-input text-[#222950]" required>
         <option disabled selected value="null">Select Bazar</option>
       </select>
       <h1 class="font-semibold text-[#595F84]">Area</h1>
@@ -348,6 +348,29 @@ var reatailer = document.querySelector(".addreatailer");
                 });
 
                 $('#bazar_new').html(html);
+
+            }
+        });
+    })
+</script>
+
+<script>
+    $('#union_select').on('change', function(){
+        val = $('#union_select').val();
+
+        $.ajax({
+            url: "/get-bazar/"+val,
+            type: 'GET',
+            dataType: 'json', // added data type
+            success: function(res) {
+
+                html = `<option disabled value="">Select Bazar</option>`;
+
+                res.forEach(element => {
+                    html += `<option selected value=`+element.id+`>`+element.name+'</option>';
+                });
+
+                $('#bazar_select').html(html);
 
             }
         });

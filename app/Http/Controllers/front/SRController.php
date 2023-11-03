@@ -77,6 +77,7 @@ class SRController extends Controller
 
     public function retailer_store(Request $request)
     {
+        dd($request->all());
         $imageName = time().'.'.$request->photo->extension();
 
         $image = $request->photo->storeAs('public/retailer', $imageName);
