@@ -77,12 +77,42 @@ class SRController extends Controller
 
     public function retailer_store(Request $request)
     {
-        dd($request->all());
         $imageName = time().'.'.$request->photo->extension();
 
         $image = $request->photo->storeAs('public/retailer', $imageName);
 
         $image = str_replace('public','',$image);
+
+        $percentage = 0;
+
+        if ($request->name != null) {
+            # code...
+            $percentage += 10;
+        }
+        if ($request->phone != null) {
+            # code...
+            $percentage += 10;
+        }
+        if ($request->shop_name != null) {
+            # code...
+            $percentage += 10;
+        }
+        if ($request->product_type != null) {
+            # code...
+            $percentage += 10;
+        }
+        if ($request->union_id != null) {
+            # code...
+            $percentage += 10;
+        }
+        if ($request->bazar_id != null) {
+            # code...
+            $percentage += 10;
+        }
+        if ($request->photo != null) {
+            # code...
+            $percentage += 40;
+        }
 
 
         $add = new Retailer;
@@ -94,6 +124,7 @@ class SRController extends Controller
         $add->bazar_area = $request->product_type;
         $add->union_id = $request->union_id;
         $add->bazar_id = $request->bazar_id;
+        $add->percentage = $percentage;
         $add->user_id = Auth::user()->id;
         $add->save();
 

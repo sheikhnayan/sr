@@ -141,8 +141,8 @@
               <span class="bn text-[13px] text-[#3c424d]">{{ $item->bazar->name }}</span>
             </div>
             <div class="flex w-full items-center gap-4 bg-[#007AFF0A] px-4 py-3">
-              <span class="text-sm font-medium text-[#007AFF]">60%</span>
-              <div class="h-2 w-full overflow-hidden rounded-full bg-[#007AFF1F]"><div class="h-full w-[60%] rounded-full bg-[#007AFF]"></div></div>
+              <span class="text-sm font-medium text-[#007AFF]">{{ $item->percentage }}%</span>
+              <div class="h-2 w-full overflow-hidden rounded-full bg-[#007AFF1F]"><div class="h-full rounded-full bg-[#007AFF]" style="width: {{ $item->percentage }}%"></div></div>
             </div>
         </a>
 
@@ -158,8 +158,8 @@
       <form action="{{ route('front.sr.retailer.update',[$item->id]) }}" class="flex flex-col gap-4" method="POST" enctype="multipart/form-data">
           @csrf
         <div class="flex items-center gap-4">
-          <label for="upload-file" class="flex w-[80px] h-[80px] cursor-pointer items-center justify-center rounded-lg" style="border: 2px solid #007AFF52; background: #007AFF08;">
-            <input id="upload-file" name="photo" type="file" class="hidden" />
+          <label for="upload-file{{ $item->id }}" class="flex w-[80px] h-[80px] cursor-pointer items-center justify-center rounded-lg" style="border: 2px solid #007AFF52; background: #007AFF08;">
+            <input id="upload-file{{ $item->id }}" name="photo" type="file" class="hidden" />
             <img src="{{ asset('front/images/camera-icon.svg') }}" alt="">
           </label>
 
@@ -382,9 +382,9 @@ var reatailer = document.querySelector(".addreatailer");
         val = $(this).val();
 
         if (val == 'bazar-side') {
-            $('.bazar-side-input').toggle();
+            $('.bazar-side-input').show();
         }else{
-            $('.bazar-side-input').toggle();
+            $('.bazar-side-input').hide();
         }
     })
 </script>
