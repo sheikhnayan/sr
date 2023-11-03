@@ -35,14 +35,19 @@
             <img class="dashboard__card-img" src="./assets/Group.svg" alt="" />
             <div>
               <h3 class="dashboard__card-title">Total Retailer</h3>
-              <p class="dashboard__card-amount">2000</p>
+              <p class="dashboard__card-amount">{{ $data->count() }}</p>
             </div>
           </div>
           <div class="dashboard__card">
             <img class="dashboard__card-img" src="./assets/group3.svg" alt="" />
             <div>
               <h3 class="dashboard__card-title">Toatal Bazar</h3>
-              <p class="dashboard__card-amount">80</p>
+              <p class="dashboard__card-amount">
+                @php
+                    $total_bazar = DB::table('bazars')->count();
+                @endphp
+                {{ $total_bazar }}
+              </p>
             </div>
           </div>
           <div class="dashboard__card">
@@ -55,7 +60,7 @@
           <div class="dashboard__card_with_button">
             <div class="dashboard_card_button_container">
               <button id="myBtn" class="dashboard_card_button">Add New Retailer<img class="plus_in_button"
-                  src="./assets/plus.svg" alt=""></button>
+                  src="{{ asset('admin/retailer/assets/plus.svg') }}" alt=""></button>
             </div>
           </div>
         </div>
@@ -100,91 +105,24 @@
                           </tr>
                         </thead>
                         <tbody class="order-tab1-tr">
-                          <tr>
-                            <td>01</td>
-                            <td>
-                              <div class="reatailers_name"><img src="./assets/man.svg" alt="">
-                                <p>Mohammad Rasel</p>
-                              </div>
+                            @foreach ($data as $key => $item)
+                            <tr>
+                              <td>{{ $key + 1 }}</td>
+                              <td>
+                                <div class="reatailers_name"><img src="./assets/man.svg" alt="">
+                                  <p>{{ $item->name }}</p>
+                                </div>
+                              </td>
+                              <td>{{ $item->phone }}</td>
+                              <td>{{ $item->union->name }},{{ $item->bazar->name }}
+                                    @if ($item->bazar_side_input != null)
+                                    ,{{ $item->bazar_side_input }}
+                                    @endif
                             </td>
-                            <td>+880455466814</td>
-                            <td>Mirpur,Dhaka,Bangladesh</td>
-                            <td><img id="myBtn2" class="edit_delete_icons" src="./assets/edit.svg" alt=""><img
-                                src="./assets/delete.svg" alt=""></td>
-                          </tr>
-                          <tr>
-                            <td>02</td>
-                            <td>
-                              <div class="reatailers_name"><img src="./assets/man.svg" alt="">
-                                <p>Mohammad Rasel</p>
-                              </div>
-                            </td>
-                            <td>+880455466814</td>
-                            <td>Mirpur,Dhaka,Bangladesh</td>
-                            <td><img class="edit_delete_icons" src="./assets/edit.svg" alt=""><img
-                                src="./assets/delete.svg" alt=""></td>
-                          </tr>
-                          <tr>
-                            <td>03</td>
-                            <td>
-                              <div class="reatailers_name"><img src="./assets/man.svg" alt="">
-                                <p>Mohammad Rasel</p>
-                              </div>
-                            </td>
-                            <td>+880455466814</td>
-                            <td>Mirpur,Dhaka,Bangladesh</td>
-                            <td><img class="edit_delete_icons" src="./assets/edit.svg" alt=""><img
-                                src="./assets/delete.svg" alt=""></td>
-                          </tr>
-                          <tr>
-                            <td>04</td>
-                            <td>
-                              <div class="reatailers_name"><img src="./assets/man.svg" alt="">
-                                <p>Mohammad Rasel</p>
-                              </div>
-                            </td>
-                            <td>+880455466814</td>
-                            <td>Mirpur,Dhaka,Bangladesh</td>
-                            <td><img class="edit_delete_icons" src="./assets/edit.svg" alt=""><img
-                                src="./assets/delete.svg" alt=""></td>
-                          </tr>
-                          <tr>
-                            <td>05</td>
-                            <td>
-                              <div class="reatailers_name"><img src="./assets/man.svg" alt="">
-                                <p>Mohammad Rasel</p>
-                              </div>
-                            </td>
-                            <td>+880455466814</td>
-                            <td>Mirpur,Dhaka,Bangladesh</td>
-                            <td><img class="edit_delete_icons" src="./assets/edit.svg" alt=""><img
-                                src="./assets/delete.svg" alt=""></td>
-                          </tr>
-                          <tr>
-                            <td>06</td>
-                            <td>
-                              <div class="reatailers_name"><img src="./assets/man.svg" alt="">
-                                <p>Mohammad Rasel</p>
-                              </div>
-                            </td>
-                            <td>+880455466814</td>
-                            <td>Mirpur,Dhaka,Bangladesh</td>
-                            <td><img class="edit_delete_icons" src="./assets/edit.svg" alt=""><img
-                                src="./assets/delete.svg" alt=""></td>
-                          </tr>
-                          <tr>
-                            <td>07</td>
-                            <td>
-                              <div class="reatailers_name"><img src="./assets/man.svg" alt="">
-                                <p>Mohammad Rasel</p>
-                              </div>
-                            </td>
-                            <td>+880455466814</td>
-                            <td>Mirpur,Dhaka,Bangladesh</td>
-                            <td><img class="edit_delete_icons" src="./assets/edit.svg" alt=""><img
-                                src="./assets/delete.svg" alt=""></td>
-                          </tr>
-
+                              <td><img id="myBtn2" class="edit_delete_icons" src="{{ asset('admin/retailer/assets/edit.svg') }}" alt=""><img
+                                  src="{{ asset('admin/retailer/assets/delete.svg') }}" alt=""></td>
+                            </tr>
+                            @endforeach
                         </tbody>
                       </table>
                       <div class="pagination">
@@ -270,7 +208,7 @@
                             <input type="select" placeholder="Area name">
                           </div>
                         </div>
-                        
+
                         <div class="modal_footer">
                           <button>Cencel</button>
                           <button>Add Retailer</button>
@@ -333,7 +271,7 @@
                             <input type="select" placeholder="Area name">
                           </div>
                         </div>
-                        
+
                         <div class="modal_footer">
                           <button>Cencel</button>
                           <button>Add Retailer</button>

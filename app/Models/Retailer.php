@@ -13,4 +13,9 @@ class Retailer extends Model
     {
         return $this->belongsTo(Bazar::class,'bazar_id','id');
     }
+
+    public function union()
+    {
+        return $this->belongsTo(Union::class,'union_id','id');
+    }
 }

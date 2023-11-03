@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Retailer;
 
 class RetailerController extends Controller
 {
@@ -12,7 +13,9 @@ class RetailerController extends Controller
      */
     public function index()
     {
-        return view('admin.retailer.index');
+        $data = Retailer::latest()->get();
+
+        return view('admin.retailer.index',compact('data'));
     }
 
     /**

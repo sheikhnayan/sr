@@ -95,7 +95,7 @@ Route::prefix('admin')->group(function () {
         Route::get('/checkout-man-profile', [CheckoutController::class,'checkout_man_profile'])->name('checkout-man-profile');
     });
 
-    Route::prefix('/retailer')->name('retailer.')->group(function () {
+    Route::prefix('/retailers')->name('retailer.')->group(function () {
         Route::get('/', [RetailerController::class,'index'])->name('index');
         Route::get('/profile', [RetailerController::class,'profile'])->name('profile');
     });
